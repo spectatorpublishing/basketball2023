@@ -1,7 +1,7 @@
-# Black History Month Issue :tada:
+# Basketball Special Edition :tada:
 
 ### To Deploy
-1) Clone the repo `git clone git@github.com:NewsroomDevelopment/bhm-issue.git`
+1) Clone the repo `git clone git@github.com:NewsroomDevelopment/basketball2022.git`
 2) Make sure you have the latest changes: `git pull origin master`
 3) Install dependencies by running `npm install`
 4) In the root directory, run `npm run deploy`
