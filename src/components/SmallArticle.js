@@ -7,7 +7,7 @@ const ArticleWrap = styled.div`
     width:36.5vw;
     margin-left: ${props => props.right ? "0vw" : "4vw"};
     margin-right: ${props => props.right ? "4vw" : "0vw"};
-    margin-top: 2vw;
+    margin-top: 10vw;
     margin-bottom:2vw;
     @media (max-width: 500px) {
         width:100%;

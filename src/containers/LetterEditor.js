@@ -18,19 +18,20 @@ const Title = styled.div`
     font-size: 5em;
     letter-spacing: 0.05em;
     color:rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px #0C120C;
     padding:6vh 0 2vh 0;
     word-wrap:break-word;
 
     @media (max-width: 768px) {
         font-size: 2em;
+        -webkit-text-stroke: 1px #0C120C;
     }
 
 `;
 
 const Body = styled.div`
     font-size: 1.5em; 
-    color:white;
+    color: #0C120C;
     word-wrap:break-word;
     width:100%;
 

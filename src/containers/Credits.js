@@ -19,8 +19,8 @@ const Title = styled.div`
     font-weight: 900;
     font-size: 3em;
     text-align:center;
-    letter-spacing: 0.05em;
-    color:white;
+    letter-spacing: 0.1em;
+    color:#555555;
     width:65%;
     margin-left:auto;
     margin-right:auto;
@@ -40,19 +40,20 @@ const Credits = styled.div`
     font-style: normal;
     font-weight: 900;
     font-size: 2em;
-    color:white;
+    color:#555555;
     text-align:center;
     width:65%;
     margin-left:auto;
     margin-right:auto;
     padding-top:2vh;
     padding-bottom:2vh;
-    
+    letter-spacing: 0.1em;
 `;
+
 const Body = styled.div`
     h1 {
         text-align:center;
-        color:white;
+        color:#000000;
     }
 `;
 
@@ -62,7 +63,7 @@ const SubDiv = styled.div`
     @media ${device.tablet} {
         width: fit-content;
     }
-    color:white;
+    color:#000000;
 `;
 
 
@@ -100,15 +101,15 @@ const LetterEditor = () => {
                 <Row>
                     <SubDiv>
                         <h2>Corporate Board</h2>
-                        <p>Sarah Braka, Editor in Chief</p>
-                        <p>Elizabeth Karpen, Managing Editor</p>
-                        <p>Tamarah Wallace, Publisher</p>
+                        <p>Ence, Editor in Chief</p>
+                        <p>Dia Gill, Managing Editor</p>
+                        <p>Vilanna Wang, Publisher</p>
                     </SubDiv>
 
                     <SubDiv>
                         <h2>Design and Development</h2>
-                        <p>Hong Sen Du, Head of Newsroom Development</p>
-                        <p>Caroline Mao, Product Designer</p>
+                        <p>Victoria Geh, Head of Newsroom Development</p>
+                        <p>Cindy Espinosa, Product Designer</p>
                         <p>Ray Banke, Deputy Illustrations Editor</p>
                     </SubDiv>
 

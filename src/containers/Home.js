@@ -58,9 +58,9 @@ const TextWrap = styled.div`
     font-size: 7.375em;
     position:relative;
     top:5%;
-    font-weight:bold;
+    font-weight:900;
     left:3%;
-    color:rgba(172, 186, 237, 1);
+    color:#D2D2C0;
     font-style: italic;
     @media (max-width: 501px) {
         display:none;
@@ -92,7 +92,7 @@ const TextWrapMobile = styled.div`
 `;
 
 const PartOneText = styled.div`
-    text-transform:uppercase;
+    #text-transform:uppercase;
     @media (max-width: 500px) {
         left:0%;
         padding:2vw;
@@ -114,7 +114,7 @@ const PartOneText = styled.div`
 const PartTwoText = styled.div`
     margin-left:3vh;
     margin-top:2vh;
-    text-transform:uppercase;
+    #text-transform:uppercase;
     @media (max-width: 500px) {
         float:right;
         margin-top:0vh;
@@ -140,13 +140,13 @@ const Home = () => {
 
             <MobileNav current="home" />
             <TextWrapMobile>
-                <PartOneText>black history</PartOneText>
-                <PartTwoText>month edition</PartTwoText>
+                <PartOneText>basketball</PartOneText>
+                <PartTwoText>title edition</PartTwoText>
             </TextWrapMobile>
             <CoverWrapper id="home">
                 <TextWrap>
-                    <PartOneText>black history</PartOneText>
-                    <PartTwoText>month edition</PartTwoText>
+                    <PartOneText>basketball</PartOneText>
+                    <PartTwoText>title edition</PartTwoText>
                 </TextWrap>
                 <NavWrap>
                     <VerticalNav color="white" current="home" />
@@ -154,7 +154,7 @@ const Home = () => {
             </CoverWrapper>
 
             <LetterSec />
-            <NavigationSec first={true} next="news" link="/news" />
+            <NavigationSec first={true} next="all basketball" link="/all" />
             <CreditsSec />
         </Wrapper>
 

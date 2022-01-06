@@ -3,13 +3,15 @@ export const news_articles = [
         image_url: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/KMG2HBNEKJGENICVS4EJFRY5Z4.gif",
         article_title: "After a year of national reckoning, Black students continue organizing for racial justice",
         article_authors: "Talia Abrahamson",
-        article_link: "https://www.columbiaspectator.com/news/2021/02/08/after-a-year-of-national-reckoning-black-students-continue-organizing-for-racial-justice/"
+        article_link: "https://www.columbiaspectator.com/news/2021/02/08/after-a-year-of-national-reckoning-black-students-continue-organizing-for-racial-justice/",
+        gender: 'womens'
     },
     {
         image_url: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/34BUCNV5XZA3XPN4FE2NC3LQVY.jpg",
         article_title: "10 grantees named as recipients of the inaugural Racial Justice Mini-Grant",
         article_authors: "Faith Onyechere",
-        article_link: "https://www.columbiaspectator.com/news/2021/02/11/ten-grantees-named-as-recipients-of-the-inaugural-racial-justice-mini-grant/"
+        article_link: "https://www.columbiaspectator.com/news/2021/02/11/ten-grantees-named-as-recipients-of-the-inaugural-racial-justice-mini-grant/",
+        gender: 'mens'
     },
     {
         image_url: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/BP3MRG6PCVHORCGDND5VYMH6BM.png",

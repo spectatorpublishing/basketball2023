@@ -66,11 +66,9 @@ const MobileNavBar = ({ color, current }) => {
             />
             <Menu isOpen={open} width={'100vw'}>
                 <Tab id="home"  current={current === "home"} className="menu-item" href="/">Home</Tab>
-                <Link style={{ textDecoration: 'none' }} to="/news"><Tab id="about"  current={current === "news"} className="menu-item" href="/news">News</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/opinion"><Tab id="contact" current={current === "opinion"} className="menu-item" href="/opinion">Opinion</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/sports"><Tab current={current === "sports"} className="menu-item--small" href="/sports">Sports</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/a&e"><Tab current={current === "a&e"} href="/a&e">A&E</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/the-eye"><Tab current={current === "eye"} href="/the-eye">The Eye</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/womens"><Tab id="about"  current={current === "womens"} className="menu-item" href="/womens">WOMEN'S BASKETBALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/mens"><Tab id="contact" current={current === "mens"} className="menu-item" href="/mens">MEN'S BASKETBALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "all"} className="menu-item--small" href="/all">ALL</Tab></Link>
             </Menu>
         </NavWrap>
 

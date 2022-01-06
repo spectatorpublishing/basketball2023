@@ -16,8 +16,8 @@ const Tab = styled.a`
     margin-bottom: 5vh;
     position:relative;
     text-align:right;
-    color: ${props => props.current ? 'black' : 'white'};
-    background-color: ${props => props.current ? 'rgba(172, 186, 237, 1)' : 'none'};
+    color: #000D74;
+    background-color: ${props => props.current ? '#D2D2C0' : 'none'};
     padding:  ${props => props.current ? '1vw 2vw 1.5vw 7vw' : 'auto'};
     height:  ${props => props.current ? '3vh' : 'auto'};
     width:  ${props => props.current ? '10vw' : 'auto'};
@@ -28,8 +28,8 @@ const Tab = styled.a`
     }
 
     :hover {
-        color: black;
-        background-color:rgba(172, 186, 237, 1);
+        color: #000D74;
+        background-color: #D2D2C0;
         padding: 1vw 2vw 1.5vw 7vw;
         height:  ${props => props.current ? '3vh' : 'auto'};
         width:  ${props => props.current ? '10vw' : 'auto'};
@@ -63,31 +63,21 @@ const NavBar = ({ current }) => {
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             <Tab href="/" current={current === "home"}>
-                <NavText> HOME </NavText>
+                <NavText>HOME</NavText>
             </Tab>
-            <Link style={{ textDecoration: 'none' }} to="/news"><Tab current={current === "news"}>
+            <Link style={{ textDecoration: 'none' }} to="/womens"><Tab current={current === "news"}>
                 <NavText>
-                    NEWS
+                    WOMEN'S BASKETBALL
                 </NavText>
             </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/opinion"><Tab current={current === "opinion"}>
+            <Link style={{ textDecoration: 'none' }} to="/mens"><Tab current={current === "opinion"}>
                 <NavText >
-                    Opinion
+                    MEN'S BASKETBALL
                 </NavText>
             </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/sports"><Tab current={current === "sports"}>
+            <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "sports"}>
                 <NavText>
-                    Sports
-                </NavText>
-            </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/a&e"><Tab current={current === "a&e"}>
-                <NavText >
-                    A&E
-                </NavText>
-            </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/the-eye"><Tab urrent={current === "eye"}>
-                <NavText >
-                    THE EYE
+                    ALL
                 </NavText>
             </Tab></Link>
         </VertNav >
