@@ -121,7 +121,7 @@ const Section = ({ id, articles, color, current }) => {
           <Filter current={current === "mens"}>Men's Basketball</Filter>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/womens">
-          <Filter href="/womens" current={current === "womens"}>Women's Basketball</Filter>
+          <Filter current={current === "womens"}>Women's Basketball</Filter>
         </Link>
 
         

@@ -25,11 +25,10 @@ const Tab = styled.a`
     margin-bottom: 5vh;
     position:relative;
     text-align:right;
-    color: ${props => props.current ? '#000D74' : 'white'};;
-    background-color: ${props => props.current ? 'rgba(255, 255, 255, 0.85)' : 'none'};
-    padding:  ${props => props.current ? '1vw 2vw 1.5vw 7vw' : 'auto'};
-    height:  ${props => props.current ? '3vh' : 'auto'};
-    width:  ${props => props.current ? '7vw' : 'auto'};
+    color: white;
+    padding: auto;
+    height: auto;
+    width: auto;
     text-decoration:none;
     div {
       width: 100%;
@@ -71,24 +70,26 @@ const NavBar = ({ current }) => {
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             <Links>
-            <Tab href="/" current={current === "home"}>
-                <NavText>HOME</NavText>
-            </Tab>
-            <Link style={{ textDecoration: 'none' }} to="/womens"><Tab current={current === "womens"}>
-                <NavText>
-                    WOMEN'S BASKETBALL
-                </NavText>
-            </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/mens"><Tab current={current === "mens"}>
-                <NavText >
-                    MEN'S BASKETBALL
-                </NavText>
-            </Tab></Link>
-            <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "all"}>
-                <NavText>
-                    ALL
-                </NavText>
-            </Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/"><Tab current={current === "home"}>
+                    <NavText>
+                        HOME
+                    </NavText>
+                </Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/womens"><Tab current={current === "womens"}>
+                    <NavText>
+                        WOMEN'S BASKETBALL
+                    </NavText>
+                </Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/mens"><Tab current={current === "mens"}>
+                    <NavText >
+                        MEN'S BASKETBALL
+                    </NavText>
+                </Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "all"}>
+                    <NavText>
+                        ALL
+                    </NavText>
+                </Tab></Link>
             </Links>
         </VertNav >
     );
