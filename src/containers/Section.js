@@ -11,6 +11,7 @@ import SmallArticle from '../components/SmallArticle';
 import NavigationSec from '../components/Navigation';
 import MobileNav from '../components/MobileNav';
 import Lines from '../components/Lines';
+import Heading from './Heading';
 
 const SectionWrap1 = styled.div`
 
@@ -141,17 +142,28 @@ const MobileNavWrap = styled.div`
         }
 `;
 
+const Wrapper = styled.div`
+    padding-left:7%;
+    padding-right:7%;
+    overflow-x:hidden;
+    @media (max-width: 768px) {
+        height:100vh;
+        padding-left:0%;
+        padding-right:0%;
+    }
+`;
+
 const CoverWrapper = styled.div`
-    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UQ4JFQMSONFXJHSBKTCU64BQGQ.png);
+    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/JENGHVSK3FCXPD4GTNMSIQBBZA.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     width:100%;
     height:110vh;
 
     @media (max-width: 500px) {
         width:100%;
         height:40vh;
-        margin-top:25vw;
+        margin-top:25vw; 
         background-size:cover !important;
     }
 
@@ -284,17 +296,7 @@ const Section = ({ id, articles, header, color, next, link }) => {
     }, [])
     return (
         <div>
-            <MobileNav current={id} />
-            <TextWrapMobile>
-                <PartOneText>basketball</PartOneText>
-                <PartTwoText>title edition</PartTwoText>
-            </TextWrapMobile>
-            <CoverWrapper id="home">
-                <TextWrap>
-                    <PartOneText>basketball</PartOneText>
-                    <PartTwoText>title edition</PartTwoText>
-                </TextWrap>
-            </CoverWrapper>
+            <Heading/>
             <GenderWrap>
                 <Mens>Men's Basketball</Mens>
                 <Womens>Women's Basketball</Womens>
@@ -335,9 +337,6 @@ const Section = ({ id, articles, header, color, next, link }) => {
                     </ArticlesWrap>
                 </Wrapper2>
                 {renderLines && <Lines last_index={lastIndex} mobile={isMobile} />}
-                <NavWrap>
-                    <VerticalNav color="#251282" current={id} />
-                </NavWrap>
             </SectionWrap1 >
         </div>
     );
