@@ -30,6 +30,10 @@ const CoverWrapper = styled.div`
     }
     `;
 
+const SocialsWrapper = styled.div`
+    padding-left:7%;
+    padding-right:7%;
+    `;
 const Wrapper = styled.div`
     padding-left:7%;
     padding-right:7%;
