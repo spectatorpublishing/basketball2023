@@ -92,7 +92,7 @@ const ImageWrap = styled.div`
 `;
 
 const Section = ({ id, articles, color, current }) => {
-  console.log(current)
+    console.log(id)
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -120,7 +120,7 @@ const Section = ({ id, articles, color, current }) => {
         <Link style={{ textDecoration: 'none' }} to="/mens">
           <Filter current={current === "mens"}>Men's Basketball</Filter>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/womens" current={current === "womens"}>
+        <Link style={{ textDecoration: 'none' }} to="/womens">
           <Filter href="/womens" current={current === "womens"}>Women's Basketball</Filter>
         </Link>
 

@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const VertNav = styled.div`
-    text-align: right;
-    position: fixed;
-    right: 1vw;
-    top:3vh;
-    font-weight:700;
-    z-index:100;
+  text-align: right;
+  position: fixed;
+  right: 1vw;
+  top: 3vh;
+  font-weight: 700;
+  z-index: 100;
 `;
 
 const Links = styled.div`
@@ -32,8 +32,8 @@ const Tab = styled.a`
     width:  ${props => props.current ? '7vw' : 'auto'};
     text-decoration:none;
     div {
-        width: ${props => props.current ? '100%' : 'auto'};
-        font-size: ${props => props.current ? '1.5em' : '1em'};
+      width: 100%;
+      font-size: 1.5em;
     }
 
     :hover {
@@ -50,15 +50,14 @@ const Tab = styled.a`
 
 `;
 const NavText = styled.div`
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    position:relative;
-    width:100%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
 `;
 
-
 const Logo = styled.div`
-    margin-bottom:5vh;
+  margin-bottom: 5vh;
 `;
 const NavBar = ({ current }) => {
     console.log(current)
