@@ -3,15 +3,13 @@ import styled from "styled-components";
 
 import { device } from "../device";
 import "../index.css";
-import VerticalNav from "../components/VerticalNav";
-import SmallArticle from "../components/SmallArticle";
-import MobileNav from "../components/MobileNav";
+import SmallArticle from '../components/SmallArticle';
+import Heading from './Heading';
 
 const SectionWrap1 = styled.div`
   background: ${(props) => props.color};
   padding-left: 9%;
   padding-right: 9%;
-
   @media (max-width: 500px) {
     padding-left: 4%;
     padding-right: 4%;
@@ -25,13 +23,21 @@ const ArticlesWrap = styled.div`
 `;
 
 const GenderWrap = styled.div`
-  padding-top: 7.5vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: colum;
   justify-content: space-evenly;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 5vw;
+    @media (max-width: 500px) {
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+        margin-top:7vw;
+    }
 `;
 
-const Mens = styled.div`
+const Filter = styled.div`
   text-transform: uppercase;
   background: #c4d8e2;
   padding: 2vh 4vh 2vh 4vh;
@@ -59,158 +65,27 @@ const Mens = styled.div`
   }
 `;
 
-const Womens = styled.div`
-    text-transform:uppercase;
-    background: #C4D8E2;
-    padding: 2vh 6vh 2vh 6vh;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    @media (max-width: 500px) {
-        left:0%;
-        padding:2vw;
-        :after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color:#0102C1;
-            transform-origin: 100% 0;
-            transform: skew(-10deg);
-            z-index: -1;
-        }
-    }
-    :hover {
-        color: white;
-        background-color: #CD4F27;
-        }
-    }
-`;
-
-const NavWrap = styled.div`
-  display: none;
-
-  @media ${device.tablet} {
-    display: inherit;
-    padding-bottom: 4rem;
-  }
-
-  @media ${device.laptop} {
-    padding-bottom: 3rem;
-  }
-`;
-
-const MobileNavWrap = styled.div`
-  display: inherit;
-
-  @media ${device.tablet} {
-    display: none;
-  }
-`;
-
-const CoverWrapper = styled.div`
-  background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UQ4JFQMSONFXJHSBKTCU64BQGQ.png);
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 110vh;
-
-  @media (max-width: 500px) {
-    width: 100%;
-    height: 40vh;
-    margin-top: 25vw;
-    background-size: cover !important;
-  }
-
-  @media (max-width: 768px) {
-    height: 60vh;
-  }
-
-  @media (max-width: 1300px) {
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-`;
-
-const TextWrap = styled.div`
-  font-size: 7.375em;
-  position: relative;
-  top: 5%;
-  font-weight: 900;
-  left: 3%;
-  color: #d2d2c0;
-  font-style: italic;
-  @media (max-width: 501px) {
-    display: none;
-  }
-  @media (max-width: 768px) {
-    font-size: 5em;
-  }
-`;
-
-const TextWrapMobile = styled.div`
-  font-size: 2.5em;
-  position: relative;
-  color: white;
-  font-style: italic;
-  height: auto;
-  font-weight: 900;
-  letter-spacing: 1px;
-  div {
+const ImageWrap = styled.div`
+    z-index:10;
+    width: inherit;
+    max-height: 20rem;
+    transition-duration:1s;
     position: relative;
-    display: inline-block;
-    padding: 0.5em 0.5em 0.5em 0.25em;
-    overflow: hidden;
-    color: #fff;
-  }
-
-  @media (min-width: 500px) {
-    display: none;
-  }
-`;
-
-const PartOneText = styled.div`
-  #text-transform: uppercase;
-  @media (max-width: 500px) {
-    left: 0%;
-    padding: 2vw;
     :after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #0102c1;
-      transform-origin: 100% 0;
-      transform: skew(-10deg);
-      z-index: -1;
+        content:'';
+        position:absolute;
+        left:0; top:0;
+        width:100%; height:100%;
+        display:inline-block;
+        transition-duration:1s;
+        z-index:5;
+        opacity:1;
+        background: linear-gradient(rgba(1, 2, 193, 0.29),rgba(1, 2, 193, 0.29));
     }
-  }
-`;
-
-const PartTwoText = styled.div`
-  margin-left: 3vh;
-  margin-top: 2vh;
-  #text-transform: uppercase;
-  @media (max-width: 500px) {
-    float: right;
-    margin-top: 0vh;
-    padding: 2vw;
-    :after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #0102c1;
-      transform-origin: 0% 100%;
-      transform: skew(-10deg);
-      z-index: -1;
+    :hover::after {
+        transition-duration:1s;
+        opacity:0;
     }
-  }
 `;
 
 const Section = ({ id, articles, color }) => {
@@ -237,20 +112,10 @@ const Section = ({ id, articles, color }) => {
   }, []);
   return (
     <div>
-      <MobileNav current={id} />
-      <TextWrapMobile>
-        <PartOneText>basketball</PartOneText>
-        <PartTwoText>title edition</PartTwoText>
-      </TextWrapMobile>
-      <CoverWrapper id="home">
-        <TextWrap>
-          <PartOneText>basketball</PartOneText>
-          <PartTwoText>title edition</PartTwoText>
-        </TextWrap>
-      </CoverWrapper>
+      <Heading/>
       <GenderWrap>
-        <Mens>Men's Basketball</Mens>
-        <Womens>Women's Basketball</Womens>
+        <Filter>Men's Basketball</Filter>
+        <Filter>Women's Basketball</Filter>
       </GenderWrap>
       <SectionWrap1 id={id} color={color}>
           <ArticlesWrap>
@@ -258,9 +123,6 @@ const Section = ({ id, articles, color }) => {
               return <SmallArticle article={article} />;
             })}
           </ArticlesWrap>
-        <NavWrap>
-          <VerticalNav color="#251282" current={id} />
-        </NavWrap>
       </SectionWrap1>
     </div>
   );

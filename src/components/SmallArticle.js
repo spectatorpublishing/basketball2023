@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const ArticleWrap = styled.div`
     display: flex;
     flex-direction: column;
-    max-width:36.5vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    max-width:40vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
     margin-top: 5vw;
     margin-bottom:2vw;
     @media (max-width: 500px) {
