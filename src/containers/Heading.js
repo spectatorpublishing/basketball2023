@@ -10,7 +10,7 @@ import MobileNav from '../components/MobileNav';
 const CoverWrapper = styled.div`
     background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/JENGHVSK3FCXPD4GTNMSIQBBZA.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     width:100%;
     height:110vh;
 
