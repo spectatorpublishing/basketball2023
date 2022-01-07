@@ -214,6 +214,7 @@ const PartTwoText = styled.div`
 `;
 
 const Section = ({ id, articles, color }) => {
+    console.log(id)
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
