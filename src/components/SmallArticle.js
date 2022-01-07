@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const ArticleWrap = styled.div`
     display: flex;
     flex-direction: column;
-    width:36.5vw;
-    margin-left: ${props => props.right ? "0vw" : "4vw"};
-    margin-right: ${props => props.right ? "4vw" : "0vw"};
-    margin-top: 10vw;
+    max-width:36.5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
     margin-bottom:2vw;
     @media (max-width: 500px) {
         width:100%;
@@ -87,9 +87,9 @@ const Author = styled.p`
 `;
 
 
-const ArticleBox = ({ article, right }) => {
+const ArticleBox = ({ article }) => {
     return (
-        <ArticleWrap right={right}>
+        <ArticleWrap>
             <Link href={article.article_link} target="_blank" rel="noreferrer">
                 <ImageWrap>
                     <ArticleImg src={article.image_url} />
