@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 import { device } from "../device";
 import "../index.css";
@@ -39,7 +40,9 @@ const GenderWrap = styled.div`
 
 const Filter = styled.div`
   text-transform: uppercase;
-  background: #c4d8e2;
+  color: ${props => props.current ? 'white' : '#555555'};
+  background-color: ${props => props.current ? '#cd4f27' : '#c4d8e2'};
+  font-weight: bold;
   padding: 2vh 4vh 2vh 4vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
@@ -88,7 +91,8 @@ const ImageWrap = styled.div`
     }
 `;
 
-const Section = ({ id, articles, color }) => {
+const Section = ({ id, articles, color, current }) => {
+  console.log(current)
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -112,9 +116,15 @@ const Section = ({ id, articles, color }) => {
   return (
     <div>
       <Heading/>
-      <GenderWrap>
-        <Filter>Men's Basketball</Filter>
-        <Filter>Women's Basketball</Filter>
+      <GenderWrap>  
+        <Link style={{ textDecoration: 'none' }} to="/mens">
+          <Filter current={current === "mens"}>Men's Basketball</Filter>
+        </Link>
+        <Link style={{ textDecoration: 'none' }} to="/womens" current={current === "womens"}>
+          <Filter href="/womens" current={current === "womens"}>Women's Basketball</Filter>
+        </Link>
+
+        
       </GenderWrap>
       <SectionWrap1 id={id} color={color}>
           <ArticlesWrap>

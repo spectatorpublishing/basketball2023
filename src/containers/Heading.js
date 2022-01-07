@@ -7,12 +7,13 @@ import NavigationSec from '../components/Navigation'
 import VerticalNav from '../components/VerticalNav';
 import MobileNav from '../components/MobileNav';
 
+
 const CoverWrapper = styled.div`
-    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/JENGHVSK3FCXPD4GTNMSIQBBZA.jpg);
+    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/CBMHUPQ56ZGDXDVOJIRGAUBMWQ.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     width:100%;
-    height:110vh;
+    height: 110vh;
 
     @media (max-width: 500px) {
         width:100%;
@@ -25,7 +26,6 @@ const CoverWrapper = styled.div`
     }
 
     @media (max-width: 1300px) {
-        background-size:contain;
         background-repeat:no-repeat;
     }
     `;
@@ -53,10 +53,10 @@ const NavWrap = styled.div`
 const TextWrap = styled.div`
     font-size: 7.375em;
     position:relative;
-    top:5%;
+    top:55%;
     font-weight:900;
     left:3%;
-    color:#D2D2C0;
+    color:white;
     font-style: italic;
     @media (max-width: 501px) {
         display:none;
@@ -131,22 +131,22 @@ const PartTwoText = styled.div`
 `;
 const Heading = () => {
     return (
-        <Wrapper>
+        <div>
             <MobileNav current="home" />
             <TextWrapMobile>
                 <PartOneText>basketball</PartOneText>
-                <PartTwoText>title edition</PartTwoText>
+                <PartOneText>title edition</PartOneText>
             </TextWrapMobile>
             <CoverWrapper id="home">
                 <TextWrap>
                     <PartOneText>basketball</PartOneText>
-                    <PartTwoText>title edition</PartTwoText>
+                    <PartOneText>title edition</PartOneText>
                 </TextWrap>
                 <NavWrap>
                     <VerticalNav color="white" current="home" />
                 </NavWrap>
             </CoverWrapper>
-        </Wrapper>
+        </div>
     );
 };
 
