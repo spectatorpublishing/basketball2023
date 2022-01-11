@@ -17,18 +17,29 @@ const SectionWrap1 = styled.div`
   }
 `;
 
-const ArticlesWrap = styled.div`
+const TwoColumn = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 
+const ArticlesWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const GenderColumn = styled.div`
+  flex-basis: 50%;
+
+  @media (max-width: 500px) {
+    flex-basis: 100%;
+  }
+`;
+
 const GenderWrap = styled.div`
   display: flex;
-  flex-direction: colum;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-left: 2vw;
-  margin-right: 2vw;
   margin-top: 5vw;
     @media (max-width: 500px) {
         width:100%;
@@ -91,8 +102,8 @@ const ImageWrap = styled.div`
     }
 `;
 
-const Section = ({ id, articles, color, current }) => {
-    console.log(id)
+const Section = ({ id, mendata, womendata, color, current }) => {
+  console.log(id)
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -115,23 +126,33 @@ const Section = ({ id, articles, color, current }) => {
   }, []);
   return (
     <div>
-      <Heading/>
-      <GenderWrap>  
+      <Heading />
+      <GenderWrap>
         <Link style={{ textDecoration: 'none' }} to="/mens">
           <Filter current={current === "mens"}>Men's Basketball</Filter>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/womens">
           <Filter current={current === "womens"}>Women's Basketball</Filter>
         </Link>
-
-        
       </GenderWrap>
+
       <SectionWrap1 id={id} color={color}>
-          <ArticlesWrap>
-            {articles.map((article) => {
-              return <SmallArticle article={article} />;
-            })}
-          </ArticlesWrap>
+        {current === "mens" && <TwoColumn> {mendata.map((article) => {
+          return <SmallArticle article={article} />;
+        })} </TwoColumn>}
+
+        {current === "womens" && <TwoColumn> {womendata.map((article) => {
+          return <SmallArticle article={article} />;
+        })} </TwoColumn>}
+
+        {current === "all" && <ArticlesWrap>
+          <GenderColumn> {mendata.map((article) => {
+            return <SmallArticle article={article} />;
+          })} </GenderColumn>
+          <GenderColumn> {womendata.map((article) => {
+            return <SmallArticle article={article} />;
+          })} </GenderColumn>
+        </ArticlesWrap>}
       </SectionWrap1>
     </div>
   );

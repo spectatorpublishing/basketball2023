@@ -138,13 +138,13 @@ const Heading = () => {
         <div>
             <MobileNav current="home" />
             <TextWrapMobile>
-                <PartOneText>basketball</PartOneText>
-                <PartOneText>title edition</PartOneText>
+                <PartOneText>2021-22</PartOneText>
+                <PartOneText>basketball edition</PartOneText>
             </TextWrapMobile>
             <CoverWrapper id="home">
                 <TextWrap>
-                    <PartOneText>basketball</PartOneText>
-                    <PartOneText>title edition</PartOneText>
+                    <PartOneText>2021-22</PartOneText>
+                    <PartOneText>basketball edition</PartOneText>
                 </TextWrap>
                 <NavWrap>
                     <VerticalNav color="white" current="home" />
