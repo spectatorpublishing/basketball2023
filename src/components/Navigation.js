@@ -10,7 +10,7 @@ const NavWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/A5Z2BNPLOBD4NKQUF4CESB6SJQ.png) #6B6BA2;
+    background:url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/CBMHUPQ56ZGDXDVOJIRGAUBMWQ.jpg) #6B6BA2;
     background-size: cover;
     background-position: 30% 80%;
     @media (max-width: 768px) {
