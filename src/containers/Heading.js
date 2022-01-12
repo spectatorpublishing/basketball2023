@@ -17,40 +17,19 @@ const CoverWrapper = styled.div`
 
     @media (max-width: 500px) {
         width:100%;
-        height:40vh;
-        background-size:cover !important;
+        height: 110vh;
     }
 
     @media (max-width: 768px) {
         height:60vh;
     }
-
-    @media (max-width: 1300px) {
-        background-repeat:no-repeat;
-    }
     `;
-
-const SocialsWrapper = styled.div`
-    padding-left:7%;
-    padding-right:7%;
-    `;
-const Wrapper = styled.div`
-    padding-left:7%;
-    padding-right:7%;
-    overflow-x:hidden;
-    @media (max-width: 768px) {
-        height:100vh;
-        padding-left:0%;
-        padding-right:0%;
-    }
-`;
 
 const NavWrap = styled.div`
     display: none;
 
     @media ${device.tablet} {
         display: inherit;
-        margin-top: 0;
     }
 `;
 
@@ -78,6 +57,7 @@ const TextWrapMobile = styled.div`
     height:auto;
     font-weight:900;
     letter-spacing:1px;
+
     div {
         position: relative;
         display: inline-block;
@@ -92,7 +72,6 @@ const TextWrapMobile = styled.div`
 `;
 
 const PartOneText = styled.div`
-    #text-transform:uppercase;
     @media (max-width: 500px) {
         left:0%;
         padding:2vw;
@@ -111,28 +90,6 @@ const PartOneText = styled.div`
     }
 `;
 
-const PartTwoText = styled.div`
-    margin-left:3vh;
-    margin-top:2vh;
-    #text-transform:uppercase;
-    @media (max-width: 500px) {
-        float:right;
-        margin-top:0vh;
-        padding:2vw;
-        :after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color:#0102C1;
-            transform-origin: 0% 100%;
-            transform: skew(-10deg);
-            z-index: -1;
-        }
-    }
-`;
 const Heading = () => {
     return (
         <div>

@@ -24,8 +24,11 @@ const TwoColumn = styled.div`
 `;
 
 const ArticlesWrap = styled.div`
+  padding-left: 8vw;
   display: flex;
   flex-wrap: wrap;
+  position: center;
+  
 `;
 
 const GenderColumn = styled.div`
@@ -127,17 +130,17 @@ const Section = ({ id, mendata, womendata, color, current }) => {
   return (
     <div>
       <Heading />
-      <GenderWrap>
-        <Link style={{ textDecoration: 'none' }} to="/mens">
+      <GenderWrap id='section1'>
+        <Link style={{ textDecoration: 'none' }} to="/mens/#section1">
           <Filter current={current === "mens"}>Men's Basketball</Filter>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/womens">
+        <Link style={{ textDecoration: 'none' }} to="/womens/#section1">
           <Filter current={current === "womens"}>Women's Basketball</Filter>
         </Link>
       </GenderWrap>
 
       <SectionWrap1 id={id} color={color}>
-        {current === "mens" && <TwoColumn> {mendata.map((article) => {
+        {current === "mens" && <TwoColumn > {mendata.map((article) => {
           return <SmallArticle article={article} />;
         })} </TwoColumn>}
 

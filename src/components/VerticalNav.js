@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
 const VertNav = styled.div`
   text-align: right;
-  position: fixed;
+  position: absolute;
   right: 1vw;
   top: 3vh;
   font-weight: 700;
@@ -38,9 +39,6 @@ const Tab = styled.a`
     :hover {
         color: #000D74;
         background-color: rgba(255, 255, 255, 0.85);;
-        padding: 1vw 2vw 1.5vw 7vw;
-        height:  ${props => props.current ? '3vh' : 'auto'};
-        width:  ${props => props.current ? '7vw' : 'auto'};
         div {
             width: 100%;
             font-size: 1.5em;
@@ -75,12 +73,12 @@ const NavBar = ({ current }) => {
                         HOME
                     </NavText>
                 </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/womens"><Tab current={current === "womens"}>
+                <Link style={{ textDecoration: 'none' }} to="/womens/#section1"><Tab current={current === "womens"}>
                     <NavText>
                         WOMEN'S BASKETBALL
                     </NavText>
                 </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/mens"><Tab current={current === "mens"}>
+                <Link style={{ textDecoration: 'none' }} to="/mens/#section1"><Tab current={current === "mens"}>
                     <NavText >
                         MEN'S BASKETBALL
                     </NavText>

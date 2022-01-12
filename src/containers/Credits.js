@@ -150,11 +150,11 @@ const LetterEditor = () => {
                         <div>
                             <h3>Design and Development</h3>
                             <p>Victoria Geh, Head of Newsroom Development</p>
+                            <p>Philippe Wu, Head of Product</p>
                             <p>Hong Du, Senior Newsroom Developer</p>
                             <p>Patrick Puma, Deputy Newsroom Developer</p>
                             <p>Cindy Espinosa, Senior Product Designer</p>
                             <p>Sadie Rochman, Associate Copy Editor</p>
-                            <p>Philippe Wu, Head of Product</p>
                         </div>
                     </SubDiv>
                 </Row>
