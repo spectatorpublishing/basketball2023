@@ -41,34 +41,15 @@ const TextWrap = styled.div`
     left:3%;
     color:white;
     font-style: italic;
-    @media (max-width: 501px) {
-        display:none;
-    }
     @media (max-width: 768px) {
         font-size:5em;
     }
-`;
-
-const TextWrapMobile = styled.div`    
-    font-size: 2.5em;
-    position:relative;
-    color:white;
-    font-style:italic;
-    height:auto;
-    font-weight:900;
-    letter-spacing:1px;
-
-    div {
-        position: relative;
-        display: inline-block;
-        padding: 0.5em 0.5em 0.5em 0.25em;
-        overflow: hidden;
-        color: #fff;
+    @media (max-width: 650px) {
+        font-size:3em;
+        position:relative;
+        top: 60%;
     }
-    
-    @media (min-width: 500px) {
-            display: none;
-    }
+
 `;
 
 const PartOneText = styled.div`
@@ -94,10 +75,6 @@ const Heading = () => {
     return (
         <div>
             <MobileNav current="home" />
-            <TextWrapMobile>
-                <PartOneText>2021-22</PartOneText>
-                <PartOneText>basketball edition</PartOneText>
-            </TextWrapMobile>
             <CoverWrapper id="home">
                 <TextWrap>
                     <PartOneText>2021-22</PartOneText>
