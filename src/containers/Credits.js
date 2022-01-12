@@ -100,159 +100,62 @@ const LetterEditor = () => {
             <Body>
                 <Row>
                     <SubDiv>
-                        <h2>Corporate Board</h2>
-                        <p>Ence, Editor in Chief</p>
-                        <p>Dia Gill, Managing Editor</p>
-                        <p>Vilanna Wang, Publisher</p>
-                    </SubDiv>
-
-                    <SubDiv>
-                        <h2>Design and Development</h2>
-                        <p>Victoria Geh, Head of Newsroom Development</p>
-                        <p>Cindy Espinosa, Product Designer</p>
-                        <p>Ray Banke, Deputy Illustrations Editor</p>
-                    </SubDiv>
-
-                    <SubDiv>
-                        <h2>Lead Illustration By</h2>
-                        <p>Ray Banke, Deputy Illustrations Editor</p>
-                    </SubDiv>
-                </Row>
-                <h1>Content</h1>
-                <Row>
-                    <SubDiv>
                         <div>
-                            <h3>News</h3>
-                            <p>Dia Gill, News Editor</p>
-                            <p>Sofia Kwon, News Editor</p>
-                            <p>Abby Melbourne, Deputy News Editor</p>
-                            <p>Talia Abrahamson</p>
-                            <p>Faith Onyechere</p>
-                            <p>Lucy Brenner</p>
-                            <p>Katherine Nessel</p>
-                            <p>Maya Mitrasinovic</p>
-                            <p>Faith Andrews</p>
-                            <p>Irie Sentner</p>
-                            <p>Stella Pagkas</p>
+                            <h3>Sports</h3>
+                            <p>Miles Schachner, Sports Editor</p>
+                            <p>Stephen Dames, Deputy Sports Editor</p>
+                            <p>Robert Gao, Deputy Sports Editor</p>
+                            <p>Jorge Hernandez, Deputy Sports Editor</p>
+                            <p>Matthew Kim, Senior Staff Writer</p>
+                            <p>Adam Lang, Senior Staff Writer</p>
+                            <p>Talya Lerner, Staff Writer</p>
+                            <p>Henry Oltman, Staff Writer</p>
+                            <p>Owen Tesoro, Staff Writer</p>
+                            <p>Rebecca Wachen, Staff Writer</p>
+                            <p>Takashi Williams, Staff Writers</p>
                         </div>
+
+                       
+                        
+
+                    </SubDiv>
+                    <SubDiv>
                         <div>
-                            <h3>Arts and Entertainment</h3>
-                            <p>Noah Sheidlower, A&E Editor</p>
-                            <p>Bella Druckman, Deputy A&E Editor</p>
-                            <p>Fernanda Aguero</p>
-                            <p>Esterah Brown</p>
-                            <p>Julia Tong</p>
-                            <p>Irene Madrigal</p>
-                            <p>Emma Schartz</p>
-                            <p>Anya Raj</p>
+                            <h3>Photo</h3>
+                            <p>Millie Felder, Photo Editor</p>
+                            <p>Kate Della Pietra, Deputy Photo Editor</p>
+                            <p>Samantha Camacho, Deputy Photo Editor</p>
+                            <p>Alex Kieu, Deputy Photo Editor</p>
+                            <p>Kat St. Martin, Deputy Photo Editor</p>
+                            <p>Caitlin Buckley, Staff Photographer</p>
+                            <p>Kathy Fang, Staff Photographer</p>
+                            <p>Shannon Binns, Staff Photographer</p>
 
                         </div>
                         <div>
                             <h3>Illustrations</h3>
-                            <p>Brenda Huang, Illustrations Editor</p>
-                            <p>Noelle Hunter</p>
-                            <p>Julian Michaud</p>
-                            <p>Sadia Sharif</p>
-                            <p>Melody Lu</p>
-                            <p>Isai Soto</p>
-                            <p>Natalie Tak</p>
-
-                        </div>
-                        <div>
-                            <h3>Video</h3>
-                            <p>Ryan Balderas, Deputy Video Editor</p>
-                            <p>Caitlin Buckley</p>
-                        </div>
-                        <div>
-                            <h3>Spec Audio</h3>
-                            <p>
-                                Samuel Hyman, Executive Editor of the Ear</p>
-                        </div>
-
-                    </SubDiv>
-                    <SubDiv>
-                        <div>
-                            <h3>Opinion</h3>
-                            <p>Ryan Oden, Editorial Page Editor</p>
-                            <p>Gurtej Gill, Deputy Editorial Page Editor</p>
-                            <p>Senem Yurdakul, Deputy Editorial Page Editor</p>
-                            <p>Lily Nathanson, Deputy Editorial Page Editor</p>
-                            <p>Karlton Gaskin, Deputy Editorial Page Editor</p>
-                            <p>Hsinyen Huang, Deputy Editorial Page Editor</p>
-                            <p>Casey Qi</p>
-                            <p>Isabella Inouye</p>
-                        </div>
-                        <div>
-                            <h3>Sports</h3>
-                            <p>Mackenzie George, Sports Editor</p>
-                            <p>Ence Morse, Sports Editor</p>
-                            <p>Matt Kim, Deputy Sports Editor</p>
-                            <p>Miles Schachner, Deputy Sports Editor</p>
-                            <p>Wick Hallos</p>
-                        </div>
-                        <div>
-                            <h3>Graphics</h3>
-                            <p>Ellen Guo</p>
-                        </div>
-                        <div>
-                            <h3>Photo</h3>
-                            <p>Beatrice Shlansky, Photo Editor</p>
-                            <p>Millie Felder, Deputy Photo Editor</p>
-                            <p>Kate Della Pietra, Deputy Photo Editor</p>
-                            <p>Elisabeth McLaughlin, Deputy Photo Editor</p>
-                            <p>Samantha Camacho</p>
-                            <p>Rommel Nunez</p>
-                            <p>Joao Santos</p>
-                            <p>Kirill Buskirk</p>
-                            <p>Princeton Huang</p>
-                            <p>Selina Yang</p>
-
-                        </div>
-                        <div>
-                            <h3>The Eye</h3>
-                            <p>Jade Justice, Features Editor</p>
-                            <p>Annie Cheng</p>
-                            <p>William Yee</p>
-                            <p>Kaiwen Zheng</p>
+                            <p>Carlos Ochoa, Staff Illustrator</p>
                         </div>
                     </SubDiv>
                     <SubDiv>
                         <div>
                             <h3>Copy</h3>
-                            <p>Emma Bradbury, Head Copy Editor</p>
-                            <p>Fritzie Schwentker, Deputy Copy Editor</p>
-                            <p>Mabry Griffin, Deputy Copy Editor</p>
-                            <p>Kaylene Chong, Deputy Copy Editor</p>
-                            <p>Vincenzo DiNatale, Deputy Copy Editor</p>
-                            <p>Olivia Vella</p>
-                            <p>Carolyn Wang</p>
-                            <p>Harry Shi</p>
-                            <p>Jacob Kang</p>
-                            <p>Robyn Fohouo</p>
-                            <p>Katherine Carraway</p>
-                            <p>Rachel Borshchenko</p>
-                            <p>Jonah Pitkowsky</p>
-                            <p>Natalie Park</p>
-                            <p>Adeline Hu</p>
-                            <p>Maria Levit</p>
-                            <p>Eden Teferi</p>
-                            <p>Willa Nagy</p>
-                            <p>Alia Derriey</p>
-                            <p>Sam Barnett</p>
-                            <p>Kathryn Cherven</p>
-                            <p>Leif Wood</p>
-                            <p>Renuka Balakrishnan</p>
-                            <p>Abby Sim</p>
-                            <p>Adam Burns</p>
-                            <p>Haley Zehrung</p>
-                            <p>Madison Guzy</p>
-                            <p>Natalie Goldberg</p>
-                            <p>Michaela Fleischer</p>
-                            <p> Noyna Roy</p>
-                            <p>Zoe Yin</p>
+                            <p>Kaylene Su Yee Chong, Head Copy Editor</p>
+                            <p>Maria Levit, Deputy Copy Editor</p>
+                            <p>Sam Barnett, Associate Copy Editor</p>
+                            <p>Adam Burns, Associate Copy Editor</p>
+                            <p>Sadie Rochman, Associate Copy Editor</p>
+                            <p>Yvin Shin, Associate Copy Editor</p>
                         </div>
-  
-                    
+                        <div>
+                            <h3>Design and Development</h3>
+                            <p>Victoria Geh, Head of Newsroom Development</p>
+                            <p>Hong Du, Senior Newsroom Developer</p>
+                            <p>Patrick Puma, Deputy Newsroom Developer</p>
+                            <p>Cindy Espinosa, Senior Product Designer</p>
+                            <p>Sadie Rochman, Associate Copy Editor</p>
+                            <p>Philippe Wu, Head of Product</p>
+                        </div>
                     </SubDiv>
                 </Row>
 
