@@ -46,14 +46,15 @@ const LetterEditor = () => {
             <Title>LETTER FROM THE EDITOR</Title>
             <Body>
                 <p>Dear readers, </p>
-                <p>Each year during the month of February, we celebrate Black History Month, which is a time dedicated to highlighting the accomplishments of Black Americans and Black culture. This year, it is even more important to champion Black scholars, artists, athletes, entrepreneurs, and future leaders as we aim to amplify their voices.
-</p>
-                <p>Within Spectator’s Black History Month issue, you can find coverage of the development of distinct foodways and food trends in Harlem; profiles of Black student activists, haircare entrepreneurs, and musicians whose heritage has influenced their craft; and an examination of the University’s failure to provide resources to students who want to learn art forms with roots in the Black community like tap dance or jazz music. Furthermore, the issue explores new developments in uplifting marginalized voices, both in professors’ attempts to address racism through adjusting syllabi to highlight Black and other historically underrepresented scholars and through the University’s racial justice mini-grants.</p>
-                <p>Columbia is an institution with a long history of racial injustice, and its narratives have often been whitewashed. We hope that within this edition you can learn more about the long-overlooked contributions that Black scholars, activists, and creatives have made to the Columbia and larger West Harlem community.
-</p>
+                <p>For almost two years, no basketball games were played in Levien Gymnasium, as the ongoing pandemic pushed athletics to the sidelines. The Ivy League’s athletes and fans were hit especially hard—while the Power Five conferences played throughout the pandemic, the Ancient Eight canceled its 2020-2021 season completely, leaving athletes stranded at home, watching their peers compete as they itched to get back on the court.
+                </p>
+                <p>While the pandemic continues to remain a threat, Columbia basketball is officially back. With this issue, we hope to give readers a snapshot of the state of both the men and women’s programs in their returning seasons.
+                </p>
+                <p>From the story of how a first-year guard on the women’s team was recruited from Australia to a look at what the year off was like for the men’s basketball sophomore class, our staff was thrilled to return to basketball coverage this year. As the women’s squad sets its sights on the Ivy League title while the men’s team hopes to rebound from a 1-13 season, these are the stories that define the state of Columbia basketball.
+                </p>
+                <p>Thank you very much for reading!</p>
                 <hr></hr>
-                <p>Sarah Braka, Editor in Chief</p>
-                <p>Elizabeth Karpen, Managing Editor</p>
+                <p>Miles Schachner, Sports Editor</p>
             </Body></LetterWrap>
     );
 };
