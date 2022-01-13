@@ -71,7 +71,7 @@ const PartOneText = styled.div`
     }
 `;
 
-const Heading = ({setSection}) => {
+const Heading = ({ setSection }) => {
     return (
         <div>
             <MobileNav current="home" />

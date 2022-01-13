@@ -59,7 +59,7 @@ const Logo = styled.div`
 `;
 
 
-const NavBar = ({ current, setSection}) => {
+const NavBar = ({ current, setSection }) => {
     return (
         <VertNav>
             <Logo>
@@ -75,22 +75,27 @@ const NavBar = ({ current, setSection}) => {
                         HOME
                     </NavText>
                 </Tab></Link>
-               <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "womens"}> 
-                    <NavText>
-                        WOMEN'S BASKETBALL
-                    </NavText>
-                </Tab>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab onClick={() => setSection("womens")}>
+                        <NavText>
+                            WOMEN'S BASKETBALL
+                        </NavText>
+                    </Tab>
                 </Link>
-                <Tab>
-                    <NavText onClick={() => setSection("mens")}>
-                        MEN'S BASKETBALL
-                    </NavText>
-                </Tab>
-                <Tab onClick={() => setSection("all")}>
-                    <NavText>
-                        ALL
-                    </NavText>
-                </Tab>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab>
+                        <NavText onClick={() => setSection("mens")}>
+                            MEN'S BASKETBALL
+                        </NavText>
+                    </Tab>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab onClick={() => setSection("all")}>
+                        <NavText>
+                            ALL
+                        </NavText>
+                    </Tab>
+                </Link>
             </Links>
         </VertNav >
     );
