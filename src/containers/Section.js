@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { device } from "../device";
 import "../index.css";
-import SmallArticle from '../components/SmallArticle';
-import Heading from './Heading';
+import SmallArticle from "../components/SmallArticle";
+import Heading from "./Heading";
 import { render } from "react-dom";
+
+import { mendata } from "../data/mendata";
+import { womendata } from "../data/womendata";
+import { sports_articles } from "../data/sports_articles";
 
 const SectionWrap1 = styled.div`
   background: ${(props) => props.color};
@@ -29,7 +33,6 @@ const ArticlesWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: center;
-  
 `;
 
 const GenderColumn = styled.div`
@@ -45,18 +48,16 @@ const GenderWrap = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 5vw;
-    @media (max-width: 500px) {
-        width:100%;
-        margin-left:0;
-        margin-right:0;
-        margin-top:7vw;
-    }
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 7vw;
+  }
 `;
 
 const Filter = styled.div`
   text-transform: uppercase;
-  color: ${props => props.setSection ? 'white' : '#555555'};
-  background-color: ${props => props.setSection ? '#cd4f27' : '#c4d8e2'};
   font-weight: bold;
   padding: 2vh 4vh 2vh 4vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -84,8 +85,21 @@ const Filter = styled.div`
   }
 `;
 
-const Section = ({ id, mendata, womendata, color, current }) => {
-  console.log(id)
+const Women = styled.div`
+  color: ${(props) => (props.section == "womens" ? "white" : "#555555")};
+  background-color: ${(props) =>
+    props.section == "womens" ? "#cd4f27" : "#c4d8e2"};
+  border-radius: 14px;
+`;
+
+const Men = styled.div`
+  color: ${(props) => (props.section == "mens" ? "white" : "#555555")};
+  background-color: ${(props) =>
+    props.section == "mens" ? "#cd4f27" : "#c4d8e2"};
+  border-radius: 14px;
+`;
+
+const Section = ({ id, mendata, womendata, color }) => {
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -111,29 +125,54 @@ const Section = ({ id, mendata, womendata, color, current }) => {
 
   return (
     <div>
-      <Heading />
-      <GenderWrap id='section1'>
-        <Filter onClick={() => setSection("mens")}>Men's Basketball</Filter>
-        <Filter onClick={() => setSection("womens")}>Women's Basketball</Filter>
+      <Heading setSection={setSection} />
+      <GenderWrap id="section1">
+        <Men section={section}>
+          {" "}
+          <Filter onClick={() => setSection("mens")}>Men's Basketball</Filter>
+        </Men>
+        <Women section={section}>
+          <Filter onClick={() => setSection("womens")}>
+            Women's Basketball
+          </Filter>
+        </Women>
       </GenderWrap>
 
       <SectionWrap1 id={id} color={color}>
-        {(current === "mens" || section === "mens") && <TwoColumn> {mendata.map((article) => {
-          return <SmallArticle article={article} />;
-        })} </TwoColumn>}
+        {section === "mens" && (
+          <TwoColumn>
+            {" "}
+            {mendata.map((article) => {
+              return <SmallArticle article={article} />;
+            })}{" "}
+          </TwoColumn>
+        )}
 
-        {(current === "womens" || section === "womens") && <TwoColumn> {womendata.map((article) => {
-          return <SmallArticle article={article} />;
-        })} </TwoColumn>}
+        {section === "womens" && (
+          <TwoColumn>
+            {" "}
+            {womendata.map((article) => {
+              return <SmallArticle article={article} />;
+            })}{" "}
+          </TwoColumn>
+        )}
 
-        {section === "all" && <ArticlesWrap>
-          <GenderColumn> {mendata.map((article) => {
-            return <SmallArticle article={article} />;
-          })} </GenderColumn>
-          <GenderColumn> {womendata.map((article) => {
-            return <SmallArticle article={article} />;
-          })} </GenderColumn>
-        </ArticlesWrap>}
+        {section === "all" && (
+          <ArticlesWrap>
+            <GenderColumn>
+              {" "}
+              {mendata.map((article) => {
+                return <SmallArticle article={article} />;
+              })}{" "}
+            </GenderColumn>
+            <GenderColumn>
+              {" "}
+              {womendata.map((article) => {
+                return <SmallArticle article={article} />;
+              })}{" "}
+            </GenderColumn>
+          </ArticlesWrap>
+        )}
       </SectionWrap1>
     </div>
   );
