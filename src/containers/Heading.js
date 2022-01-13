@@ -42,12 +42,13 @@ const TextWrap = styled.div`
     color:white;
     font-style: italic;
     @media (max-width: 768px) {
+        top: 50%;
         font-size:5em;
     }
     @media (max-width: 650px) {
         font-size:3em;
         position:relative;
-        top: 60%;
+        top: 40%;
     }
 
 `;

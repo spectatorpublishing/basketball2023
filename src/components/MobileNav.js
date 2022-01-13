@@ -33,7 +33,7 @@ const Logo = styled.div`
     position:relative;
     left:5%;
 `;
-const MobileNavBar = ({ color, current }) => {
+const MobileNavBar = ({ color, current, setSection }) => {
     const [open, setOpen] = React.useState(false);
 
     function handleClick() {
@@ -66,9 +66,9 @@ const MobileNavBar = ({ color, current }) => {
             />
             <Menu isOpen={open} width={'100vw'}>
                 <Tab id="home"  current={current === "home"} className="menu-item" href="/">Home</Tab>
-                <Link style={{ textDecoration: 'none' }} to="/womens"><Tab id="about"  current={current === "womens"} className="menu-item" href="/womens">WOMEN'S BASKETBALL</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/mens"><Tab id="contact" current={current === "mens"} className="menu-item" href="/mens">MEN'S BASKETBALL</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "all"} className="menu-item--small" href="/all">ALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("womens")} className="menu-item">WOMEN'S BASKETBALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("mens")} className="menu-item">MEN'S BASKETBALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("all")} className="menu-item--small">ALL</Tab></Link>
             </Menu>
         </NavWrap>
 
