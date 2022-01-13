@@ -39,6 +39,7 @@ const Tab = styled.a`
     :hover {
         color: #000D74;
         background-color: rgba(255, 255, 255, 0.85);;
+        cursor: pointer;
         div {
             width: 100%;
             font-size: 1.5em;
@@ -56,8 +57,11 @@ const NavText = styled.div`
 const Logo = styled.div`
   margin-bottom: 5vh;
 `;
-const NavBar = ({ current }) => {
+
+
+const NavBar = ({ current, setSection}) => {
     console.log(current)
+
     return (
         <VertNav>
             <Logo>
@@ -73,21 +77,22 @@ const NavBar = ({ current }) => {
                         HOME
                     </NavText>
                 </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/womens/#section1"><Tab current={current === "womens"}>
+               <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "womens"}> 
                     <NavText>
                         WOMEN'S BASKETBALL
                     </NavText>
-                </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/mens/#section1"><Tab current={current === "mens"}>
-                    <NavText >
+                </Tab>
+                </Link>
+                <Tab>
+                    <NavText onClick={() => setSection("mens")}>
                         MEN'S BASKETBALL
                     </NavText>
-                </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all"><Tab current={current === "all"}>
+                </Tab>
+                <Tab onClick={() => setSection("all")}>
                     <NavText>
                         ALL
                     </NavText>
-                </Tab></Link>
+                </Tab>
             </Links>
         </VertNav >
     );

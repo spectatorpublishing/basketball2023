@@ -6,6 +6,7 @@ import { device } from "../device";
 import "../index.css";
 import SmallArticle from '../components/SmallArticle';
 import Heading from './Heading';
+import { render } from "react-dom";
 
 const SectionWrap1 = styled.div`
   background: ${(props) => props.color};
@@ -54,8 +55,8 @@ const GenderWrap = styled.div`
 
 const Filter = styled.div`
   text-transform: uppercase;
-  color: ${props => props.current ? 'white' : '#555555'};
-  background-color: ${props => props.current ? '#cd4f27' : '#c4d8e2'};
+  color: ${props => props.setSection ? 'white' : '#555555'};
+  background-color: ${props => props.setSection ? '#cd4f27' : '#c4d8e2'};
   font-weight: bold;
   padding: 2vh 4vh 2vh 4vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -79,30 +80,8 @@ const Filter = styled.div`
   :hover {
     color: white;
     background-color: #cd4f27;
+    cursor: pointer;
   }
-`;
-
-const ImageWrap = styled.div`
-    z-index:10;
-    width: inherit;
-    max-height: 20rem;
-    transition-duration:1s;
-    position: relative;
-    :after {
-        content:'';
-        position:absolute;
-        left:0; top:0;
-        width:100%; height:100%;
-        display:inline-block;
-        transition-duration:1s;
-        z-index:5;
-        opacity:1;
-        background: linear-gradient(rgba(1, 2, 193, 0.29),rgba(1, 2, 193, 0.29));
-    }
-    :hover::after {
-        transition-duration:1s;
-        opacity:0;
-    }
 `;
 
 const Section = ({ id, mendata, womendata, color, current }) => {
@@ -112,6 +91,8 @@ const Section = ({ id, mendata, womendata, color, current }) => {
     width: window.innerWidth,
   });
   const [isMobile, setMobile] = React.useState(false);
+
+  const [section, setSection] = React.useState("all");
 
   React.useEffect(() => {
     if (dimensions.width < 500) setMobile(true);
@@ -127,28 +108,25 @@ const Section = ({ id, mendata, womendata, color, current }) => {
 
     window.addEventListener("resize", handleResize);
   }, []);
+
   return (
     <div>
       <Heading />
       <GenderWrap id='section1'>
-        <Link style={{ textDecoration: 'none' }} to="/mens/#section1">
-          <Filter current={current === "mens"}>Men's Basketball</Filter>
-        </Link>
-        <Link style={{ textDecoration: 'none' }} to="/womens/#section1">
-          <Filter current={current === "womens"}>Women's Basketball</Filter>
-        </Link>
+        <Filter onClick={() => setSection("mens")}>Men's Basketball</Filter>
+        <Filter onClick={() => setSection("womens")}>Women's Basketball</Filter>
       </GenderWrap>
 
       <SectionWrap1 id={id} color={color}>
-        {current === "mens" && <TwoColumn > {mendata.map((article) => {
+        {(current === "mens" || section === "mens") && <TwoColumn> {mendata.map((article) => {
           return <SmallArticle article={article} />;
         })} </TwoColumn>}
 
-        {current === "womens" && <TwoColumn> {womendata.map((article) => {
+        {(current === "womens" || section === "womens") && <TwoColumn> {womendata.map((article) => {
           return <SmallArticle article={article} />;
         })} </TwoColumn>}
 
-        {current === "all" && <ArticlesWrap>
+        {section === "all" && <ArticlesWrap>
           <GenderColumn> {mendata.map((article) => {
             return <SmallArticle article={article} />;
           })} </GenderColumn>
