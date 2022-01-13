@@ -60,8 +60,6 @@ const Logo = styled.div`
 
 
 const NavBar = ({ current, setSection}) => {
-    console.log(current)
-
     return (
         <VertNav>
             <Logo>
