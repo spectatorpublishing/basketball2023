@@ -26,6 +26,7 @@ const Wrapper1 = styled.div`
 const Wrapper = styled.div`
     width: 100%;
     overflow-x:hidden;
+    background: #3B4448;
     @media (max-width: 768px) {
         height:100vh;
         padding-left:0%;
@@ -46,10 +47,7 @@ const Home = () => {
     return (
         <Wrapper>
         <Heading/>
-        <Wrapper1>
-            <SocialsWrapper>
-            <SocialSpec/>
-            </SocialsWrapper>
+        <Wrapper1>     
             <LetterSec />
             <NavigationSec first={true} next="all basketball" link="/all" />
             <CreditsSec />

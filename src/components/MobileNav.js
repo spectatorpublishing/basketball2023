@@ -4,12 +4,13 @@ import HamburgerMenu from 'react-hamburger-menu';
 import { fallDown as Menu } from 'react-burger-menu';
 import "../index.css";
 import { Link } from 'react-router-dom';
-
+import { faBlackTie } from '@fortawesome/free-brands-svg-icons';
 const NavWrap = styled.div`
     text-align: center;
     margin: auto;
     padding-top: 0rem;
     height:10vh;
+    width: 100%;
     justify-content: space-between;
     align-items:center;
     display:flex;
@@ -18,38 +19,38 @@ const NavWrap = styled.div`
     left:0;
     flex-wrap: wrap;
     z-index:100;
-    background-color:#282439;
+    background-color:#DEFFB4;
     @media (min-width: 768px) {
        display:none;
     }
 `;
 
-const Tab = styled.a`
-    background-color:${props => props.current ? "rgba(172, 186, 237, 1)": "inherit"};
-    color:${props => props.current ? "black": "white"};
+const Tab = styled.div`
+    background-color:${props => props.current ? "#A3C3D0": "inherit"};
+    color:${props => props.current ? "white": "black"};
 `;
+
 const Logo = styled.div`
     z-index:100;
     position:relative;
-    left:5%;
+    left:3%;
 `;
-const MobileNavBar = ({ color, current, setSection }) => {
+const MobileNavBar = ({ current, setSection }) => {
     const [open, setOpen] = React.useState(false);
-
     function handleClick() {
         console.log(open)
         setOpen(!open)
     }
-
+    console.log(current);
     return (
 
         <NavWrap>
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    height: "40px",
-                    width: "40px",
-                }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
+                    height: "47px",
+                    width: "54px",
+                }} src="https://spectrum-logos.s3.amazonaws.com/cds_crown_black_clear.png"></img></a>
             </Logo>
             <HamburgerMenu
                 isOpen={open}
@@ -58,17 +59,29 @@ const MobileNavBar = ({ color, current, setSection }) => {
                 height={20}
                 strokeWidth={5}
                 rotate={0}
-                color='white'
+                color='black'
                 borderRadius={0}
                 animationDuration={0.5}
                 zIndex={100}
                 className="over"
             />
             <Menu isOpen={open} width={'100vw'}>
-                <Tab id="home"  current={current === "home"} className="menu-item" href="/">Home</Tab>
-                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("womens")} className="menu-item">WOMEN'S BASKETBALL</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("mens")} className="menu-item">MEN'S BASKETBALL</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all"><Tab onClick={() => setSection("all")} className="menu-item--small">ALL</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/"><Tab current={current == "home"}>Home</Tab></Link>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab  current = {current == 'womens'}  onClick={() => {setSection("womens");}}>
+                            WOMEN'S BASKETBALL
+                    </Tab>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab current = {current == 'mens'} onClick={() => setSection("mens")} >
+                            MEN'S BASKETBALL
+                    </Tab>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to="/all">
+                    <Tab current = {current == 'all'} onClick={() => setSection("all")}>
+                            ALL
+                    </Tab>
+                </Link>
             </Menu>
         </NavWrap>
 

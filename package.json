@@ -1,8 +1,8 @@
 {
-  "name": "basketball2022",
+  "name": "basketball2023",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://basketball2022.columbiadailyspectator.com/",
+  "homepage": "https://basketball2023.columbiaspectator.com/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

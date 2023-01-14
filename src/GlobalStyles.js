@@ -38,6 +38,9 @@ export const GlobalStyles = createGlobalStyle`
   /*font-family: 'Merriweather', serif*/
   @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
   
+  /*font-family: 'Baumans', serif */
+  @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+  
   /*font-family: 'Lato', sans-serif*/
   @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
   /*font-family: 'Bitter', serif; */

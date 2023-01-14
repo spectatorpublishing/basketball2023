@@ -1,167 +1,176 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../device';
-import '../index.css';
-
-const LetterWrap = styled.div`
-    padding-top:5vh;
-    border:solid 1px white;
-    margin-top:5vh;
-
-    @media (max-width: 768px) {
-        margin-left:4%;
-        margin-right:4%;
-    }
-`;
-
-const Title = styled.div`
+import { credits } from '../data/credits'
+const Disp = styled.div`
+    display: flex; 
+`
+const Container = styled.div`
+    width: 97%;
+    margin-top: 5rem;
     font-style: normal;
     font-weight: 900;
     font-size: 3em;
-    text-align:center;
-    letter-spacing: 0.1em;
-    color:#555555;
-    width:65%;
-    margin-left:auto;
-    margin-right:auto;
-    
-    padding:2vh 0 2vh 0;
-    word-wrap:break-word;
-
-    @media (max-width: 768px) {
-        font-size:1.75em;
-        width:90%;
-        padding:1vh 0 1vh 0;
+    margin-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #3B4448;
+    color: #DEFFB4;
+    border-style: solid;
+    border-color: #DEFFB4;
+    padding-bottom:3rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 2.1rem;
     }
-    
-`;
-
-const Credits = styled.div`
-    font-style: normal;
-    font-weight: 900;
-    font-size: 2em;
-    color:#555555;
-    text-align:center;
-    width:65%;
-    margin-left:auto;
-    margin-right:auto;
-    padding-top:2vh;
-    padding-bottom:2vh;
-    letter-spacing: 0.1em;
-`;
-
-const Body = styled.div`
-    h1 {
-        text-align:center;
-        color:#000000;
+    @media only screen and (max-width: 768px){
+        width: 85%;
     }
 `;
 
-
-const SubDiv = styled.div`
-    width: 75vw;
-    @media ${device.tablet} {
-        width: fit-content;
-    }
-    color:#000000;
-`;
-
-
-const Row = styled.div`
+const HeaderDiv = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    text-align: left;
     justify-content: center;
-    @media ${device.tablet} {
-        justify-content: space-evenly;
-    }
-
-    @media (max-width: 1000px) {
-        font-size:0.75em;
-
-    }
-    @media (max-width: 768px) {
-        font-size:1em !important;
-
-    }
+    align-items: center;
+    flex-direction: column;
 `;
 
-const Content = styled.div`
-    text-align:center;
+const Header = styled.h1`
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    width: 55%;
+    font-size: 3.25rem;
+    padding-top:2rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 2.1rem;
+    }
+    @media only screen and (max-width: 768px){
+        width: 80%;
+        font-size: 2rem;
+    }
+    @media only screen and (max-width: 600px){
+        font-weight: 400;
+        font-size: 1.3rem;
+        padding-right: 3rem;
+        padding-top:2rem;
+    }
+`;
+const CreditsHeader = styled.h2`
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    width: 55%;
+    font-size: 2.25rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 768px){
+        width: 80%;
+        font-size: 2rem;
+    }
+    @media only screen and (max-width: 600px){
+        font-weight: 400;
+        font-size: 0.8rem;
+        padding-right: 3rem;
+        padding-top:2rem;
+}
 `
 
+const SectAndNames = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-content:space-around;
+    width: 100%;
+    height: 150rem;
+    margin-top: 2rem;
+    @media only screen and (max-width: 1216px){
+        height: 160rem;
+    }
+    @media only screen and (max-width: 1024px){
+        height: 125rem;
+    }
+    @media only screen and (max-width: 768px){
+        
+        display: block;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: none;
+        height: fit-content;
+        margin-top:2rem;
+    }  
+`;
 
+const Section = styled.div`
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 22rem;
+    height: fit-content;
+    color: white;
+    margin-bottom: 2rem;
+    padding:0;
+    margin:0;
+    @media only screen and (max-width: 1216px){
+        font-size: 1.6rem;
+        width: 16rem;
+    }
+    @media only screen and (max-width: 1024px){
+        font-size: 1.4rem;
+        width: 14rem;
+    }
+    @media only screen and (max-width: 768px){
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    @media only screen and (max-width: 600px){
+        font-size: 1.2rem;
+        width: 85%;
+    }
+`;
 
-const LetterEditor = () => {
+const Name = styled.div`
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 1rem;
+    }
+    @media only screen and (max-width: 1024px){
+        font-size: 0.75rem;
+    }
+    @media only screen and (max-width: 768px){
+        font-size:1rem;
+    }
+`;
+
+const Credits = () => {
     return (
-        <LetterWrap>
-            <Title>THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE</Title>
-            <Credits> CREDITS </Credits>
-            <Body>
-                <Row>
-                    <SubDiv>
-                        <div>
-                            <h3>Sports</h3>
-                            <p>Miles Schachner, Sports Editor</p>
-                            <p>Stephen Dames, Deputy Sports Editor</p>
-                            <p>Robert Gao, Deputy Sports Editor</p>
-                            <p>Jorge Hernandez, Deputy Sports Editor</p>
-                            <p>Matthew Kim, Senior Staff Writer</p>
-                            <p>Adam Lang, Senior Staff Writer</p>
-                            <p>Talya Lerner, Staff Writer</p>
-                            <p>Henry Oltman, Staff Writer</p>
-                            <p>Owen Tesoro, Staff Writer</p>
-                            <p>Rebecca Wachen, Staff Writer</p>
-                            <p>Takashi Williams, Staff Writers</p>
-                        </div>
-
-                       
-                        
-
-                    </SubDiv>
-                    <SubDiv>
-                        <div>
-                            <h3>Photo</h3>
-                            <p>Millie Felder, Photo Editor</p>
-                            <p>Kate Della Pietra, Deputy Photo Editor</p>
-                            <p>Samantha Camacho, Deputy Photo Editor</p>
-                            <p>Alex Kieu, Deputy Photo Editor</p>
-                            <p>Kat St. Martin, Deputy Photo Editor</p>
-                            <p>Caitlin Buckley, Staff Photographer</p>
-                            <p>Kathy Fang, Staff Photographer</p>
-                            <p>Shannon Binns, Staff Photographer</p>
-
-                        </div>
-                        <div>
-                            <h3>Illustrations</h3>
-                            <p>Carlos Ochoa, Staff Illustrator</p>
-                        </div>
-                    </SubDiv>
-                    <SubDiv>
-                        <div>
-                            <h3>Copy</h3>
-                            <p>Kaylene Su Yee Chong, Head Copy Editor</p>
-                            <p>Maria Levit, Deputy Copy Editor</p>
-                            <p>Sam Barnett, Associate Copy Editor</p>
-                            <p>Adam Burns, Associate Copy Editor</p>
-                            <p>Sadie Rochman, Associate Copy Editor</p>
-                            <p>Yvin Shin, Associate Copy Editor</p>
-                        </div>
-                        <div>
-                            <h3>Design and Development</h3>
-                            <p>Victoria Geh, Head of Newsroom Development</p>
-                            <p>Philippe Wu, Head of Product</p>
-                            <p>Hong Du, Senior Newsroom Developer</p>
-                            <p>Patrick Puma, Deputy Newsroom Developer</p>
-                            <p>Cindy Espinosa, Senior Product Designer</p>
-                            <p>Sadie Rochman, Associate Copy Editor</p>
-                        </div>
-                    </SubDiv>
-                </Row>
-
-            </Body>
-        </LetterWrap>
-    );
+        <Disp>
+        <Container id="credits">
+            <HeaderDiv><Header>THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE</Header>
+            <CreditsHeader>CREDITS</CreditsHeader>     
+            </HeaderDiv>
+            
+            <SectAndNames>
+                {Object.entries(credits).map(([section, key]) => {
+                    return(
+                        <Section> {section} 
+                        <br/>
+                        {key.map((person, index) => {
+                            return(
+                                <Name key={index}>{person.staff_name}, {person.title}</Name>
+                            );
+                        })}
+                        <br/>
+                        </Section>
+                    );
+                })}
+            </SectAndNames>
+        </Container>
+        </Disp>
+    )
 };
 
-export default LetterEditor;
+export default Credits;

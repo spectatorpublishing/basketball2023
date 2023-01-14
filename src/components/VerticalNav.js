@@ -13,7 +13,8 @@ const VertNav = styled.div`
 `;
 
 const Links = styled.div`
-    background: rgba(0, 13, 116, 0.54);
+    background-color: rgb(222, 255, 180,0.94);
+    z-index: 1;
     padding-bottom: 0.1vw;
     padding-right: 1vw;
     padding-left: 1vw;
@@ -23,10 +24,10 @@ const Links = styled.div`
 
 const Tab = styled.a`
     display:block;
+    z-index: 2;
     margin-bottom: 5vh;
     position:relative;
     text-align:right;
-    color: white;
     padding: auto;
     height: auto;
     width: auto;
@@ -49,24 +50,35 @@ const Tab = styled.a`
 `;
 const NavText = styled.div`
   letter-spacing: 0.1rem;
+  z-index:3;
+  color: #3B4448;
+  opacity:100%;
   text-transform: uppercase;
   position: relative;
   width: 100%;
 `;
 
 const Logo = styled.div`
-  margin-bottom: 5vh;
+    width: 70px;
+    height: 70px;
+    padding-top:10px;
+    text-align: center;
+    background-color: black;
+    border-radius: 100%;
+    margin-left: 25vh;
+    margin-bottom: 2.5vh;
 `;
 
 
 const NavBar = ({ current, setSection }) => {
+    console.log(current);
     return (
         <VertNav>
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    height: "38px",
-                    width: "36px",
+                    height: "50px",
+                    width: "45px",
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             <Links>

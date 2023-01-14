@@ -4,11 +4,14 @@ import styled from 'styled-components';
 const ArticleWrap = styled.div`
     display: flex;
     flex-direction: column;
-    max-width:40vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 5vw;
+    max-width:50vh;
+    margin-left: 3.25vw;
+    margin-right: 2vw;
+    margin-top: 3vw;
     margin-bottom:2vw;
+    @media (max-width: 768px) {
+        margin-right: 2vw;
+    }
     @media (max-width: 500px) {
         width:100%;
         margin-left:0;

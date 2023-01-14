@@ -11,12 +11,15 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useOnClickOutside } from "../scripts/useOnClickOutside";
 
 const StyledShareButton = styled.button`
-  background-color: #191a1b;
-  color: white;
+  background-color: #DDFFB2;
+  color: black;
   border-radius: 1.5rem;
   border: 0;
   padding: 0.5rem 0.7rem;
   cursor: pointer;
+  margin-left: -0.25rem;
+  font-weight: bold;
+  font-size:20px;
   font-family: "Merriweather" "Bitter";
   transform: translateX(0);
   transition: 300ms ease-in-out;
@@ -31,8 +34,9 @@ const StyledShareButton = styled.button`
 `;
 
 const ShareCircle = styled.div`
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3rem;
+  width: 3rem;
+  margin-left: -0.75rem;
   filter: drop-shadow(0 0 0.25rem rgba(68, 68, 68, 0.36));
   background-color: #2681ef;
   border-radius: 50rem;
@@ -298,7 +302,7 @@ function ShareButton(props) {
               <FontAwesomeIcon
                 icon={faTwitter}
                 fixedWidth
-                style={{ height: "2.15rem" }}
+                style={{ height: "2.15rem"}}
                 color={"white"}
               />
             </ShareCircle>

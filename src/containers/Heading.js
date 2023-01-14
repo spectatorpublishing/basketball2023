@@ -75,10 +75,10 @@ const PartOneText = styled.div`
 const Heading = ({ setSection }) => {
     return (
         <div>
-            <MobileNav current="home" />
+            <MobileNav current = "home" setSection = {setSection}/>
             <CoverWrapper id="home">
                 <TextWrap>
-                    <PartOneText>2021-22</PartOneText>
+                    <PartOneText>2022-23</PartOneText>
                     <PartOneText>basketball edition</PartOneText>
                 </TextWrap>
                 <NavWrap>

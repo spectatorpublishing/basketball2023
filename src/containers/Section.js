@@ -13,7 +13,7 @@ import { womendata } from "../data/womendata";
 import { sports_articles } from "../data/sports_articles";
 
 const SectionWrap1 = styled.div`
-  background: ${(props) => props.color};
+  background: #A3C3D0;
   padding-left: 9%;
   padding-right: 9%;
   @media (max-width: 500px) {
@@ -29,7 +29,6 @@ const TwoColumn = styled.div`
 `;
 
 const ArticlesWrap = styled.div`
-  padding-left: 8vw;
   display: flex;
   flex-wrap: wrap;
   position: center;
@@ -37,17 +36,17 @@ const ArticlesWrap = styled.div`
 
 const GenderColumn = styled.div`
   flex-basis: 50%;
-
   @media (max-width: 500px) {
     flex-basis: 100%;
   }
 `;
-
 const GenderWrap = styled.div`
   display: flex;
+  background-color:  #A3C3D0;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 5vw;
+  margin-right: 3vw;
   @media (max-width: 500px) {
     width: 100%;
     margin-left: 0;
@@ -57,9 +56,10 @@ const GenderWrap = styled.div`
 `;
 
 const Filter = styled.div`
+  
   text-transform: uppercase;
   font-weight: bold;
-  padding: 2vh 4vh 2vh 4vh;
+  padding: 1vh 5vh 1vh 5vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   @media (max-width: 500px) {
@@ -79,24 +79,43 @@ const Filter = styled.div`
     }
   }
   :hover {
-    color: white;
-    background-color: #cd4f27;
+    color: black;
+    background-color:#DEFFB4; 
     cursor: pointer;
   }
 `;
 
 const Women = styled.div`
-  color: ${(props) => (props.section == "womens" ? "white" : "#555555")};
+  color: ${(props) => (props.section == "womens" ? "black" : "white")};
   background-color: ${(props) =>
-    props.section == "womens" ? "#cd4f27" : "#c4d8e2"};
+    props.section == "womens" ? "#DEFFB4" : "#88A9B7"};
   border-radius: 14px;
+  width:50vh;
+  margin-left: -3rem;
+  text-align: center;
+  font-size: 20px;
+  @media (max-width: 768px) {
+    margin-left: 1.25rem;
+    margin-top: 1rem;
+    width: 50%;
+
+  }
 `;
 
 const Men = styled.div`
-  color: ${(props) => (props.section == "mens" ? "white" : "#555555")};
+  color: ${(props) => (props.section == "mens" ? "black" : "white")};
   background-color: ${(props) =>
-    props.section == "mens" ? "#cd4f27" : "#c4d8e2"};
+    props.section == "mens" ? "#DEFFB4" : "#88A9B7"};
+  font-size: 20px;
+  width:50vh;
+  margin-left: 4vw;
+  text-align: center;
   border-radius: 14px;
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-top: 0.75rem;
+    
+  }
 `;
 
 const Section = ({ id, mendata, womendata, color }) => {
@@ -168,7 +187,7 @@ const Section = ({ id, mendata, womendata, color }) => {
             <GenderColumn>
               {" "}
               {womendata.map((article) => {
-                return <SmallArticle article={article} />;
+                return <SmallArticle article={article}/>;
               })}{" "}
             </GenderColumn>
           </ArticlesWrap>
