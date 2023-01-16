@@ -72,17 +72,17 @@ const PartOneText = styled.div`
     }
 `;
 
-const Heading = ({ setSection }) => {
+const Heading = ({ section, setSection }) => {
     return (
         <div>
-            <MobileNav current = "home" setSection = {setSection}/>
+            <MobileNav current = {section} setSection = {setSection}/>
             <CoverWrapper id="home">
                 <TextWrap>
                     <PartOneText>2022-23</PartOneText>
                     <PartOneText>basketball edition</PartOneText>
                 </TextWrap>
                 <NavWrap>
-                    <VerticalNav color="white" current="home" setSection={setSection} />
+                    <VerticalNav color="white" current={section} setSection={setSection} />
                 </NavWrap>
             </CoverWrapper>
         </div>

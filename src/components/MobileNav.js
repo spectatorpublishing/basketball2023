@@ -38,10 +38,9 @@ const Logo = styled.div`
 const MobileNavBar = ({ current, setSection }) => {
     const [open, setOpen] = React.useState(false);
     function handleClick() {
-        console.log(open)
-        setOpen(!open)
+        setOpen(!open);
     }
-    console.log(current);
+    console.log("m" , current);
     return (
 
         <NavWrap>
@@ -66,20 +65,12 @@ const MobileNavBar = ({ current, setSection }) => {
                 className="over"
             />
             <Menu isOpen={open} width={'100vw'}>
-                <Link style={{ textDecoration: 'none' }} to="/"><Tab current={current == "home"}>Home</Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab  current = {current == 'womens'}  onClick={() => {setSection("womens");}}>
-                            WOMEN'S BASKETBALL
-                    </Tab>
-                </Link>
-                <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab current = {current == 'mens'} onClick={() => setSection("mens")} >
-                            MEN'S BASKETBALL
-                    </Tab>
+                <Link style={{ textDecoration: 'none' }} to="">
+                    <Tab  current = {current == 'home'}  >Home</Tab>
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to="/all">
                     <Tab current = {current == 'all'} onClick={() => setSection("all")}>
-                            ALL
+                            ARTICLES
                     </Tab>
                 </Link>
             </Menu>

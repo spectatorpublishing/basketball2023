@@ -48,9 +48,9 @@ const Header = styled.h1`
         font-size: 2rem;
     }
     @media only screen and (max-width: 600px){
-        font-weight: 400;
-        font-size: 1.3rem;
-        padding-right: 3rem;
+        width: 90%;
+        font-weight: 600;
+        font-size: 1.5rem;
         padding-top:2rem;
     }
 `;
@@ -69,9 +69,8 @@ const CreditsHeader = styled.h2`
     }
     @media only screen and (max-width: 600px){
         font-weight: 400;
-        font-size: 0.8rem;
-        padding-right: 3rem;
-        padding-top:2rem;
+        font-size: 1.5rem;
+        padding-top:0.5rem;
 }
 `
 
@@ -91,7 +90,7 @@ const SectAndNames = styled.div`
         height: 125rem;
     }
     @media only screen and (max-width: 768px){
-        
+        margin-left: 1.5rem;
         display: block;
         flex-direction: column;
         flex-wrap: nowrap;

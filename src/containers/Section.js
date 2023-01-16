@@ -35,24 +35,23 @@ const ArticlesWrap = styled.div`
 `;
 
 const GenderColumn = styled.div`
-  flex-basis: 50%;
-  @media (max-width: 500px) {
-    flex-basis: 100%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 const GenderWrap = styled.div`
   display: flex;
   background-color:  #A3C3D0;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 5vw;
-  margin-right: 3vw;
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     margin-top: 7vw;
   }
+  
 `;
 
 const Filter = styled.div`
@@ -91,13 +90,17 @@ const Women = styled.div`
     props.section == "womens" ? "#DEFFB4" : "#88A9B7"};
   border-radius: 14px;
   width:50vh;
-  margin-left: -3rem;
+  margin-left: 7%;
+  margin-top: 5px;
   text-align: center;
   font-size: 20px;
+  @media(max-width:1090px){
+    width: 40%;
+  }
   @media (max-width: 768px) {
-    margin-left: 1.25rem;
     margin-top: 1rem;
     width: 50%;
+    margin-left: 0;
 
   }
 `;
@@ -108,17 +111,24 @@ const Men = styled.div`
     props.section == "mens" ? "#DEFFB4" : "#88A9B7"};
   font-size: 20px;
   width:50vh;
-  margin-left: 4vw;
+  margin-left: 1%;
+  margin-top: 5px;
+  margin-right: 5%;
   text-align: center;
   border-radius: 14px;
+  @media(max-width:1090px){
+    width: 40%;
+  }
   @media (max-width: 768px) {
     width: 50%;
+    margin-right: 0;
     margin-top: 0.75rem;
     
   }
 `;
 
 const Section = ({ id, mendata, womendata, color }) => {
+  
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -126,7 +136,7 @@ const Section = ({ id, mendata, womendata, color }) => {
   const [isMobile, setMobile] = React.useState(false);
 
   const [section, setSection] = React.useState("all");
-
+  console.log(section);
   React.useEffect(() => {
     if (dimensions.width < 500) setMobile(true);
 
@@ -144,13 +154,14 @@ const Section = ({ id, mendata, womendata, color }) => {
 
   return (
     <div>
-      <Heading setSection={setSection} />
+      <Heading section = {section} setSection={setSection} />
       <GenderWrap id="section1">
         <Men section={section}>
           {" "}
           <Filter onClick={() => setSection("mens")}>Men's Basketball</Filter>
         </Men>
         <Women section={section}>
+          {" "}
           <Filter onClick={() => setSection("womens")}>
             Women's Basketball
           </Filter>

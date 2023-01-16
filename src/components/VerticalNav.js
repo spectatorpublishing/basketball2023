@@ -25,7 +25,7 @@ const Links = styled.div`
 const Tab = styled.a`
     display:block;
     z-index: 2;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     position:relative;
     text-align:right;
     padding: auto;
@@ -48,16 +48,34 @@ const Tab = styled.a`
     }
 
 `;
-const NavText = styled.div`
+
+const NavTextSelected = styled.div`
   letter-spacing: 0.1rem;
   z-index:3;
-  color: #3B4448;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #A3C3D0;
+  color: white;
+
   opacity:100%;
   text-transform: uppercase;
   position: relative;
   width: 100%;
 `;
-
+const NavText = styled.div`
+  letter-spacing: 0.1rem;
+  z-index:3;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  color: black;
+  background-color: inherit;
+  opacity:100%;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+`;
 const Logo = styled.div`
     width: 70px;
     height: 70px;
@@ -71,7 +89,11 @@ const Logo = styled.div`
 
 
 const NavBar = ({ current, setSection }) => {
-    console.log(current);
+    const [sec, setSec] = React.useState(current);
+    console.log("hell",sec);
+    function refreshPage(){
+        window.location.reload();
+    } 
     return (
         <VertNav>
             <Logo>
@@ -82,30 +104,29 @@ const NavBar = ({ current, setSection }) => {
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             <Links>
-                <Link style={{ textDecoration: 'none' }} to="/"><Tab current={current === "home"}>
-                    <NavText>
+                <Link style={{ textDecoration: 'none' }} to="/" >
+                    <Tab current={current == "home"}onClick={() =>{ 
+                        const n = "home"
+                        setSec(n)} }>
+                    {sec!="all" ? <NavTextSelected >
                         HOME
-                    </NavText>
+                    </NavTextSelected> : <NavText >
+                        HOME
+                    </NavText>}
+                    
                 </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab onClick={() => setSection("womens")}>
-                        <NavText>
-                            WOMEN'S BASKETBALL
-                        </NavText>
-                    </Tab>
-                </Link>
-                <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab>
-                        <NavText onClick={() => setSection("mens")}>
-                            MEN'S BASKETBALL
-                        </NavText>
-                    </Tab>
-                </Link>
-                <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab onClick={() => setSection("all")}>
-                        <NavText>
-                            ALL
-                        </NavText>
+                <Link style={{ textDecoration: 'none' }} to="/all" >
+                    <Tab current={current == "all"}onClick={() => {
+                                                const m = "all"
+                                                setSec(m)
+                                                setSection("all")
+                                                }}>
+                        {sec!=null ? <NavTextSelected>
+                            ARTICLES
+                        </NavTextSelected>: <NavText>
+                            ARTICLES
+                        </NavText>}
+                        
                     </Tab>
                 </Link>
             </Links>
