@@ -24,7 +24,31 @@ const NavWrap = styled.div`
        display:none;
     }
 `;
+const NavText = styled.div`
+z-index:3;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+padding-right: 0.5rem;
+color: black;
+background-color: inherit;
+opacity:100%;
+text-transform: uppercase;
+position: relative;
+width: 100%;
+`;
+const NavTextSelected = styled.div`
+  z-index:3;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #A3C3D0;
+  color: white;
 
+  opacity:100%;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+`;
 const Tab = styled.div`
     background-color:${props => props.current ? "#A3C3D0": "inherit"};
     color:${props => props.current ? "white": "black"};
@@ -37,6 +61,7 @@ const Logo = styled.div`
 `;
 const MobileNavBar = ({ current, setSection }) => {
     const [open, setOpen] = React.useState(false);
+    const [sec, setSec] = React.useState(current);
     function handleClick() {
         setOpen(!open);
     }
@@ -66,11 +91,25 @@ const MobileNavBar = ({ current, setSection }) => {
             />
             <Menu isOpen={open} width={'100vw'}>
                 <Link style={{ textDecoration: 'none' }} to="">
-                    <Tab  current = {current == 'home'}  >Home</Tab>
+                    <Tab current={current == "home"}onClick={() =>{ 
+                        const n = "home"
+                        setSec(n)} }>{sec!="all" ? <NavTextSelected >
+                        HOME
+                    </NavTextSelected> : <NavText >
+                        HOME
+                    </NavText>}</Tab>
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to="/all">
-                    <Tab current = {current == 'all'} onClick={() => setSection("all")}>
+                    <Tab current={current == "all"}onClick={() => {
+                                                const m = "all"
+                                                setSec(m)
+                                                setSection("all")
+                                                }}>
+                            {sec!=null ? <NavTextSelected>
                             ARTICLES
+                        </NavTextSelected>: <NavText>
+                            ARTICLES
+                        </NavText>}
                     </Tab>
                 </Link>
             </Menu>
