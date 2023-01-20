@@ -80,7 +80,7 @@ const SectAndNames = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    padding-left: 15%;
+    padding-left: 13%;
     padding-bottom: 50%;
     align-content:space-around;
     width: 70%;
