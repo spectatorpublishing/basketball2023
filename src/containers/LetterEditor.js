@@ -54,15 +54,17 @@ const LetterEditor = () => {
             <Title>LETTER FROM THE EDITOR</Title>
             <Body>
                 <p>Dear readers, </p>
-                <p>For almost two years, no basketball games were played in Levien Gymnasium, as the ongoing pandemic pushed athletics to the sidelines. The Ivy League’s athletes and fans were hit especially hard—while the Power Five conferences played throughout the pandemic, the Ancient Eight canceled its 2020-2021 season completely, leaving athletes stranded at home, watching their peers compete as they itched to get back on the court.
-                </p>
-                <p>While the pandemic continues to remain a threat, Columbia basketball is officially back. With this issue, we hope to give readers a snapshot of the state of both the men and women’s programs in their returning seasons.
-                </p>
-                <p>From the story of how a first-year guard on the women’s team was recruited from Australia to a look at what the year off was like for the men’s basketball sophomore class, our staff was thrilled to return to basketball coverage this year. As the women’s squad sets its sights on the Ivy League title while the men’s team hopes to rebound from a 1-13 season, these are the stories that define the state of Columbia basketball.
-                </p>
-                <p>Thank you very much for reading!</p>
+                <p>Last year, after almost two years of no competitions, Ivy League basketball returned. Following initially-limited attendance, Levien Gymnasium eventually welcomed back crowds of fans to cheer for the Lions as conference play picked up. 
+                 In the previous season, the women’s team saw its most successful season to date, while the men’s team limped into last place in the Ivy League. While the teams’ seasons tell opposite tales, one thing is certain: Columbia basketball is back. </p>
+                <p>In this special edition, our staff is thrilled to bring you a variety of stories, from a look at how three-pointers are changing league dynamics to a spotlight on how a first-year on the men’s basketball team hopes to change team culture. Between 
+                women’s basketball setting its sights on the Ivy League Championship and a March Madness bid and men’s basketball hoping to bounce back after two consecutive 1-13 Ivy League seasons, these are the storylines that shine light on the state of basketball 
+                at Columbia.</p>
+
+Thank you for reading!
+
+
                 <hr></hr>
-                <p>Miles Schachner, Sports Editor</p>
+                <p>Jorge Hernandez, Sports Editor</p>
             </Body></LetterWrap>
     );
 };

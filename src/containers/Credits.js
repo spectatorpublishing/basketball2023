@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { credits } from '../data/credits'
 const Disp = styled.div`
     display: flex; 
+    
 `
 const Container = styled.div`
     width: 97%;
@@ -10,14 +11,14 @@ const Container = styled.div`
     font-style: normal;
     font-weight: 900;
     font-size: 3em;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    height: 70rem;
     padding-left: 3rem;
     padding-right: 3rem;
     background-color: #3B4448;
     color: #DEFFB4;
     border-style: solid;
     border-color: #DEFFB4;
-    padding-bottom:3rem;
     @media only screen and (max-width: 1216px){
         font-size: 2.1rem;
     }
@@ -79,16 +80,11 @@ const SectAndNames = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+    padding-left: 15%;
+    padding-bottom: 50%;
     align-content:space-around;
-    width: 100%;
-    height: 150rem;
-    margin-top: 2rem;
-    @media only screen and (max-width: 1216px){
-        height: 160rem;
-    }
-    @media only screen and (max-width: 1024px){
-        height: 125rem;
-    }
+    width: 70%;
+    height: 60%;
     @media only screen and (max-width: 768px){
         margin-left: 1.5rem;
         display: block;

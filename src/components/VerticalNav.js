@@ -78,7 +78,7 @@ const NavText = styled.div`
 `;
 const Logo = styled.div`
     width: 70px;
-    height: 70px;
+    height: 60px;
     padding-top:10px;
     text-align: center;
     background-color: black;
@@ -90,10 +90,7 @@ const Logo = styled.div`
 
 const NavBar = ({ current, setSection }) => {
     const [sec, setSec] = React.useState(current);
-    console.log("hell",sec);
-    function refreshPage(){
-        window.location.reload();
-    } 
+
     return (
         <VertNav>
             <Logo>

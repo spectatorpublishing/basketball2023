@@ -16,6 +16,7 @@ const Wrapper1 = styled.div`
     padding-left:7%;
     padding-right:7%;
     overflow-x:hidden;
+    overflow-y: hidden;
     @media (max-width: 768px) {
         height:100vh;
         padding-left:0%;
