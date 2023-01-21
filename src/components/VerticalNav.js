@@ -101,8 +101,8 @@ const NavBar = ({ current, setSection }) => {
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    height: "75px",
-                    width: "70px",
+                    height: "70px",
+                    width: "65px",
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             
