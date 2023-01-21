@@ -23,6 +23,7 @@ const Container = styled.div`
         font-size: 2.1rem;
     }
     @media only screen and (max-width: 768px){
+        height: 80%;
         width: 85%;
     }
 `;

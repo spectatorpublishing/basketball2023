@@ -59,7 +59,7 @@ const Filter = styled.div`
   
   text-transform: uppercase;
   font-weight: bold;
-  padding: 1vh 5vh 1vh 5vh;
+  padding: 1vh 5vh 1vh 0vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   @media (max-width: 500px) {
@@ -96,10 +96,9 @@ const Women = styled.div`
   text-align: center;
   font-size: 20px;
   @media(max-width:1090px){
-    width: 40%;
+    width: 30%;
   }
   @media (max-width: 768px) {
-    margin-top: 1rem;
     width: 50%;
     margin-left: 0;
 
@@ -117,12 +116,14 @@ const Men = styled.div`
   text-align: center;
   border-radius: 14px;
   @media(max-width:1090px){
-    width: 40%;
+    width: 30%;
+    margin-top: 5%;
   }
   @media (max-width: 768px) {
-    width: 50%;
+    width: 60%;
+    margin-top:5%;
+    margin-bottom: 5%;
     margin-right: 0;
-    margin-top: 0.75rem;
     
   }
 `;

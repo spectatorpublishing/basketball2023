@@ -21,7 +21,7 @@ const CoverWrapper = styled.div`
     }
 
     @media (max-width: 768px) {
-        height:60vh;
+        height:35vh;
     }
     `;
 
