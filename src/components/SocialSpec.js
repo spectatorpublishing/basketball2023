@@ -23,14 +23,11 @@ const StyledShareButton = styled.button`
   font-family: "Merriweather" "Bitter";
   transform: translateX(0);
   transition: 300ms ease-in-out;
-  @media (max-width: ${theme.tablet}) {
-    ${props =>
-      props.isShowingShareCircles &&
-      css`
-        transform: translateX(-100%);
-        transition: 300ms ease-in-out 150ms;
-      `}
+  @media (max-width: 768px) {
+    margin-left: 40%;
+
   }
+  
 `;
 
 const ShareCircle = styled.div`
@@ -43,6 +40,10 @@ const ShareCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    margin-right: 1vh;
+
+  }
 `;
 const fadeIn1 = keyframes`
   0% {

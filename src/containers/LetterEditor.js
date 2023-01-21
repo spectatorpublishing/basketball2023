@@ -48,9 +48,7 @@ const Body = styled.div`
 const LetterEditor = () => {
     return (
         <LetterWrap>
-            <SocialsWrapper>
-            <SocialSpec/>
-            </SocialsWrapper>
+            
             <Title>LETTER FROM THE EDITOR</Title>
             <Body>
                 <p>Dear readers, </p>
@@ -65,7 +63,11 @@ Thank you for reading!
 
                 <hr></hr>
                 <p>Jorge Hernandez, Sports Editor</p>
-            </Body></LetterWrap>
+            </Body>
+
+            <SocialSpec/>
+         
+            </LetterWrap>
     );
 };
 
