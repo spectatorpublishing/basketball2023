@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import NavigationSec from "../components/Navigation";
 import { device } from "../device";
 import "../index.css";
 import SmallArticle from "../components/SmallArticle";
@@ -30,6 +30,7 @@ const TwoColumn = styled.div`
 
 const ArticlesWrap = styled.div`
   display: flex;
+  margin-right: 2vh;
   flex-wrap: wrap;
   position: center;
 `;
@@ -90,7 +91,7 @@ const Women = styled.div`
     props.section == "womens" ? "#DEFFB4" : "#88A9B7"};
   border-radius: 14px;
   width:50vh;
-  margin-left: 7%;
+  margin-left: 8%;
   margin-top: 5px;
   text-align: center;
   font-size: 20px;
@@ -111,9 +112,8 @@ const Men = styled.div`
     props.section == "mens" ? "#DEFFB4" : "#88A9B7"};
   font-size: 20px;
   width:50vh;
-  margin-left: 1%;
   margin-top: 5px;
-  margin-right: 5%;
+  margin-right:4%;
   text-align: center;
   border-radius: 14px;
   @media(max-width:1090px){
@@ -203,6 +203,7 @@ const Section = ({ id, mendata, womendata, color }) => {
             </GenderColumn>
           </ArticlesWrap>
         )}
+        <NavigationSec first={false} next="Home" link="/" />
       </SectionWrap1>
     </div>
   );

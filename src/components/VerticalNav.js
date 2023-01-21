@@ -15,11 +15,16 @@ const VertNav = styled.div`
 const Links = styled.div`
     background-color: rgb(222, 255, 180,0.94);
     z-index: 1;
+    transform: translateX(99%); /* normal, hidden state */
     padding-bottom: 0.1vw;
     padding-right: 1vw;
     padding-left: 1vw;
     padding-top: 1vw;
     backdrop-filter: blur(2px);
+    :hover {
+        transform: translateX(0); 
+    }
+
 `;
 
 const Tab = styled.a`
@@ -77,8 +82,8 @@ const NavText = styled.div`
   width: 100%;
 `;
 const Logo = styled.div`
-    width: 70px;
-    height: 60px;
+    width: 100px;
+    height: 80px;
     padding-top:10px;
     text-align: center;
     background-color: black;
@@ -96,37 +101,11 @@ const NavBar = ({ current, setSection }) => {
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    height: "50px",
-                    width: "45px",
+                    height: "75px",
+                    width: "70px",
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
-            <Links>
-                <Link style={{ textDecoration: 'none' }} to="/" >
-                    <Tab current={current == "home"}onClick={() =>{ 
-                        const n = "home"
-                        setSec(n)} }>
-                    {sec!="all" ? <NavTextSelected >
-                        HOME
-                    </NavTextSelected> : <NavText >
-                        HOME
-                    </NavText>}
-                    
-                </Tab></Link>
-                <Link style={{ textDecoration: 'none' }} to="/all" >
-                    <Tab current={current == "all"}onClick={() => {
-                                                const m = "all"
-                                                setSec(m)
-                                                setSection("all")
-                                                }}>
-                        {sec!=null ? <NavTextSelected>
-                            ARTICLES
-                        </NavTextSelected>: <NavText>
-                            ARTICLES
-                        </NavText>}
-                        
-                    </Tab>
-                </Link>
-            </Links>
+            
         </VertNav >
     );
 };

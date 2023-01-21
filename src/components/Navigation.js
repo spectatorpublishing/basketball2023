@@ -12,6 +12,7 @@ const NavWrap = styled.div`
     align-items: center;
     background:url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/CBMHUPQ56ZGDXDVOJIRGAUBMWQ.jpg) #6B6BA2;
     background-size: cover;
+    margin-bottom: 5vh;
     background-position: 30% 80%;
     @media (max-width: 768px) {
         height:25vh;
@@ -70,7 +71,7 @@ const NavigationSec = ({ first, next, link }) => {
                 <Link style={{ color:"inherit", textDecoration: 'none' }} to={link}>
                     <Title>{first == true ? "Begin Reading" : "Continue"}</Title>
 
-                    <Next>Next: {next}</Next>
+                    <Next>{first == true?"Next: " :"Back to: "}{next}</Next>
                 </Link>
             </TextWrap>
 

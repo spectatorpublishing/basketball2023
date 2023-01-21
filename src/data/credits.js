@@ -43,7 +43,7 @@ export const credits = {
     "Illustrations": [
       {
         "staff_name": "Kelsea Petersen",
-        "title": "Staff Illustrator"
+        "title": "Deputy Illustrations Editor"
       }
     ],
  
