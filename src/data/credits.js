@@ -42,6 +42,10 @@ export const credits = {
  
     "Illustrations": [
       {
+        "staff_name": "Ji Yoon Sim",
+        "title": "Head of Illustrations"
+      },
+      {
         "staff_name": "Kelsea Petersen",
         "title": "Deputy Illustrations Editor"
       }
