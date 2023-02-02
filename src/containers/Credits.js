@@ -144,7 +144,7 @@ const Name = styled.div`
 const Credits = () => {
     return (
         <Disp>
-        <Container id="credits">
+        <Container id="creds">
             <HeaderDiv><Header>THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE</Header>
             <CreditsHeader>CREDITS</CreditsHeader>     
             </HeaderDiv>
